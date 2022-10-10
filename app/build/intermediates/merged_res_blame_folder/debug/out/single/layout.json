@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:/layout/activity_home.xml",
+        "source": "ca.unb.mobiledev.gittogetherui.app-main-36:/layout/activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:\\layout\\item.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout\\item.xml"
+    }
+]
