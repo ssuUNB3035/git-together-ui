@@ -9,11 +9,12 @@ import ca.unb.mobiledev.gittogetherui.R
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
 import android.widget.Toast
+import ca.unb.mobiledev.gittogetherui.model.Project
 import java.util.ArrayList
 
 class HomeActivity : Activity() {
-    private var al: ArrayList<String>? = null
-    private var arrayAdapter: ArrayAdapter<String>? = null
+    private var al: ArrayList<Project>? = null
+    private var arrayAdapter: ArrayAdapter<Project>? = null
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,14 +23,8 @@ class HomeActivity : Activity() {
 
         // Adding the projects to the swipe cards
         al = ArrayList()
-        al!!.add("Project #1")
-        al!!.add("Project #2")
-        al!!.add("Project #3")
-        al!!.add("Project #4")
-        al!!.add("Project #5")
-        al!!.add("Project #6")
-        al!!.add("Project #7")
-        al!!.add("Project #8")
+        val jsonUtils = JsonUtils(this)
+        al = jsonUtils.getProjectList()
 
         arrayAdapter = ArrayAdapter(this, R.layout.item, R.id.helloText, al!!)
 
@@ -57,7 +52,7 @@ class HomeActivity : Activity() {
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
                 // Ask for more data here
-                al!!.add("XML $i")
+                //al!!.add("XML $i")
                 arrayAdapter!!.notifyDataSetChanged()
                 Log.d("LIST", "notified")
                 i++

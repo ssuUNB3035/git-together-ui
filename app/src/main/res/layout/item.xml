@@ -6,14 +6,37 @@
     android:layout_height="170dp">
 
     <TextView
-        android:id="@+id/helloText"
-        android:textSize="40sp"
+        android:id="@+id/card_description"
+        android:textSize="25sp"
         android:textColor="@android:color/white"
         android:background="#E339"
         android:gravity="center"
-        tools:text="Test"
+        tools:text="Description"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/card_title"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:background="#E339"
+        android:gravity="center"
+        tools:text="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/card_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E339"
+        android:gravity="center|start"
+        android:paddingStart="50px"
+        android:paddingEnd="50px"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:translationY="360px"
+        tools:text="java, c#" />
 
     <View
         android:id="@+id/item_swipe_left_indicator"
