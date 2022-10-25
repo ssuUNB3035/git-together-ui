@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:\\layout-w936dp-v13\\activity_login.xml",
-        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout-w936dp\\activity_login.xml"
-    },
-    {
         "merged": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-33:/layout-w936dp-v13/activity_login.xml",
         "source": "ca.unb.mobiledev.gittogetherui.app-main-36:/layout-w936dp/activity_login.xml"
     }

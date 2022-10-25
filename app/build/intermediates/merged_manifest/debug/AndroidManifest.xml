@@ -31,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
+            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

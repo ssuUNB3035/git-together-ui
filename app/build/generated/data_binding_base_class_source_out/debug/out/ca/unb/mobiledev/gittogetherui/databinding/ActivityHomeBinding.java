@@ -28,7 +28,7 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final Button buttonCreateProjects;
 
   @NonNull
-  public final Button buttonManageProjects;
+  public final Button buttonManageHome;
 
   @NonNull
   public final Button buttonProfile;
@@ -37,12 +37,12 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final SwipeFlingAdapterView frame;
 
   private ActivityHomeBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout buttonBar,
-      @NonNull Button buttonCreateProjects, @NonNull Button buttonManageProjects,
+      @NonNull Button buttonCreateProjects, @NonNull Button buttonManageHome,
       @NonNull Button buttonProfile, @NonNull SwipeFlingAdapterView frame) {
     this.rootView = rootView;
     this.buttonBar = buttonBar;
     this.buttonCreateProjects = buttonCreateProjects;
-    this.buttonManageProjects = buttonManageProjects;
+    this.buttonManageHome = buttonManageHome;
     this.buttonProfile = buttonProfile;
     this.frame = frame;
   }
@@ -86,9 +86,9 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.buttonManageProjects;
-      Button buttonManageProjects = ViewBindings.findChildViewById(rootView, id);
-      if (buttonManageProjects == null) {
+      id = R.id.button_manage_home;
+      Button buttonManageHome = ViewBindings.findChildViewById(rootView, id);
+      if (buttonManageHome == null) {
         break missingId;
       }
 
@@ -105,7 +105,7 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
 
       return new ActivityHomeBinding((ConstraintLayout) rootView, buttonBar, buttonCreateProjects,
-          buttonManageProjects, buttonProfile, frame);
+          buttonManageHome, buttonProfile, frame);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,9 +1,11 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import ca.unb.mobiledev.gittogetherui.R
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
@@ -19,6 +21,13 @@ class HomeActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        //Setting the button events
+        var manageButton = findViewById<Button>(R.id.button_manage_home)
+        manageButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, ManageActivity::class.java)
+            startActivity(intent)
+        }
 
         // Adding the projects to the swipe cards
         al = ArrayList()

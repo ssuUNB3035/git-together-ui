@@ -20,7 +20,13 @@ public final class ItemBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final TextView helloText;
+  public final TextView cardDescription;
+
+  @NonNull
+  public final TextView cardTags;
+
+  @NonNull
+  public final TextView cardTitle;
 
   @NonNull
   public final View itemSwipeLeftIndicator;
@@ -28,10 +34,13 @@ public final class ItemBinding implements ViewBinding {
   @NonNull
   public final View itemSwipeRightIndicator;
 
-  private ItemBinding(@NonNull FrameLayout rootView, @NonNull TextView helloText,
-      @NonNull View itemSwipeLeftIndicator, @NonNull View itemSwipeRightIndicator) {
+  private ItemBinding(@NonNull FrameLayout rootView, @NonNull TextView cardDescription,
+      @NonNull TextView cardTags, @NonNull TextView cardTitle, @NonNull View itemSwipeLeftIndicator,
+      @NonNull View itemSwipeRightIndicator) {
     this.rootView = rootView;
-    this.helloText = helloText;
+    this.cardDescription = cardDescription;
+    this.cardTags = cardTags;
+    this.cardTitle = cardTitle;
     this.itemSwipeLeftIndicator = itemSwipeLeftIndicator;
     this.itemSwipeRightIndicator = itemSwipeRightIndicator;
   }
@@ -63,9 +72,21 @@ public final class ItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.helloText;
-      TextView helloText = ViewBindings.findChildViewById(rootView, id);
-      if (helloText == null) {
+      id = R.id.card_description;
+      TextView cardDescription = ViewBindings.findChildViewById(rootView, id);
+      if (cardDescription == null) {
+        break missingId;
+      }
+
+      id = R.id.card_tags;
+      TextView cardTags = ViewBindings.findChildViewById(rootView, id);
+      if (cardTags == null) {
+        break missingId;
+      }
+
+      id = R.id.card_title;
+      TextView cardTitle = ViewBindings.findChildViewById(rootView, id);
+      if (cardTitle == null) {
         break missingId;
       }
 
@@ -81,8 +102,8 @@ public final class ItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemBinding((FrameLayout) rootView, helloText, itemSwipeLeftIndicator,
-          itemSwipeRightIndicator);
+      return new ItemBinding((FrameLayout) rootView, cardDescription, cardTags, cardTitle,
+          itemSwipeLeftIndicator, itemSwipeRightIndicator);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
