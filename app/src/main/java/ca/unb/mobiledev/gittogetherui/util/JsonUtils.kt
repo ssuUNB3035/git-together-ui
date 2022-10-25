@@ -33,45 +33,6 @@ class JsonUtils(context: Context) {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-//        try {
-//            val parser = Json.createParser(StringReader(jsonString))
-//            var titleTrigger = false
-//            var coordinateTrigger = false
-//            var count = 0
-//            var coordinateCount = 0
-//
-//            while (parser.hasNext()) {
-//                when (parser.next()) {
-//                    JsonParser.Event.KEY_NAME -> if (parser.string == JSON_KEY_TITLE) {
-//                        titleTrigger = true
-//                    } else if (parser.string == JSON_KEY_COORDINATES) {
-//                        coordinateTrigger = true
-//                    }
-//                    JsonParser.Event.VALUE_STRING -> if (titleTrigger && parser.string.startsWith("M")) {
-//                        val project = Project()
-//                        project.title = parser.string
-//                        projectList.add(project)
-//                        titleTrigger = false
-//                    }
-//                    JsonParser.Event.VALUE_NUMBER -> {
-//                        if (coordinateTrigger && coordinateCount == 0) {
-//                            val geoData = projectList[count]
-//                            geoData.longitude = parser.string
-//                            coordinateCount++
-//                        } else if (!coordinateTrigger && coordinateCount == 1) {
-//                            val geoData = projectList[count]
-//                            geoData.latitude = parser.string
-//                            coordinateCount = 0
-//                            count++
-//                        }
-//                        coordinateTrigger = false
-//                    }
-//                    else -> {}
-//                }
-//            }
-//        } catch (e: Exception) {
-//            e.printStackTrace()
-//        }
     }
 
     fun getProjectList(): ArrayList<Project> {
@@ -82,13 +43,6 @@ class JsonUtils(context: Context) {
         val url = URL(REQUEST_URL)
         var connection: HttpURLConnection? = null
         try {
-           // TODO
-            //  Establish an HttpURLConnection to REQUEST_URL (defined as a constant)
-            //  Hint: 
-            //    See https://github.com/hpowell20/cs2063-fall-2022-examples/tree/master/Lecture6/NetworkingURL
-            //    for an example of how to do this
-            //    Also see documentation here: http://developer.android.com/training/basics/network-ops/connecting.html
-            // DONE
             connection = url.openConnection() as HttpURLConnection?
             val streamIn = BufferedInputStream(connection?.getInputStream())
             return convertStreamToString(streamIn)

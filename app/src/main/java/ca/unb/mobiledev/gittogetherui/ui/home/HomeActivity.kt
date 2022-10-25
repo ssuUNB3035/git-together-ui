@@ -1,7 +1,6 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 
 import android.app.Activity
-import android.widget.ArrayAdapter
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -14,7 +13,7 @@ import java.util.ArrayList
 
 class HomeActivity : Activity() {
     private var al: ArrayList<Project>? = null
-    private var arrayAdapter: ArrayAdapter<Project>? = null
+    private var arrayAdapter: CardAdapter? = null
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +25,7 @@ class HomeActivity : Activity() {
         val jsonUtils = JsonUtils(this)
         al = jsonUtils.getProjectList()
 
-        arrayAdapter = ArrayAdapter(this, R.layout.item, R.id.helloText, al!!)
+        arrayAdapter = CardAdapter(this, al!!)
 
         val flingContainer = findViewById<View>(R.id.frame) as SwipeFlingAdapterView
         flingContainer.adapter = arrayAdapter
