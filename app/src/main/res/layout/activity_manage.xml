@@ -30,7 +30,7 @@
             android:showDividers="middle">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/geodata_list"
+                android:id="@+id/project_list"
                 android:name="mobiledev.unb.ca.threadinglab.CourseListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

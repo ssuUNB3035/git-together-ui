@@ -15,6 +15,7 @@ import java.util.ArrayList
 
 class HomeActivity : Activity() {
     private var al: ArrayList<Project>? = null
+    private var selectedProjects: ArrayList<Project> = ArrayList()
     private var arrayAdapter: CardAdapter? = null
     private var i = 0
 
@@ -25,7 +26,10 @@ class HomeActivity : Activity() {
         //Setting the button events
         var manageButton = findViewById<Button>(R.id.button_manage_home)
         manageButton.setOnClickListener {
+            //val extra = Bundle()
+            //extra.putSerializable("selectedProjects", selectedProjects)
             val intent = Intent(this@HomeActivity, ManageActivity::class.java)
+            //intent.putExtra("extra", extra)
             startActivity(intent)
         }
 
@@ -51,11 +55,12 @@ class HomeActivity : Activity() {
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-                Toast.makeText(this@HomeActivity, "Left!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@HomeActivity, "Left!", Toast.LENGTH_SHORT).show()
             }
 
             override fun onRightCardExit(dataObject: Any) {
-                Toast.makeText(this@HomeActivity, "Right!", Toast.LENGTH_SHORT).show()
+                selectedProjects.add(dataObject as Project)
+                //Toast.makeText(this@HomeActivity, "Right!", Toast.LENGTH_SHORT).show()
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {

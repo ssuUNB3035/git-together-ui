@@ -12,6 +12,10 @@
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-pngs-29:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\layout_activity_manage.xml.flat",
+        "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout\\activity_manage.xml"
+    },
+    {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "ca.unb.mobiledev.gittogetherui.app-merged_res-34:/layout_recyclerview_row.xml.flat",
+        "source": "ca.unb.mobiledev.gittogetherui.app-main-36:/layout/recyclerview_row.xml"
     },
     {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -72,20 +80,12 @@
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout-w1240dp\\activity_login.xml"
     },
     {
-        "merged": "ca.unb.mobiledev.gittogetherui.app-merged_res-34:/layout_item.xml.flat",
-        "source": "ca.unb.mobiledev.gittogetherui.app-main-36:/layout/item.xml"
-    },
-    {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-36:\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "ca.unb.mobiledev.gittogetherui.app-merged_res-34:/layout_activity_home.xml.flat",
-        "source": "ca.unb.mobiledev.gittogetherui.app-main-36:/layout/activity_home.xml"
     },
     {
         "merged": "C:\\Users\\blued\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
