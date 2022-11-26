@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.gittogetherui.model
 
+import java.io.Serializable
 import java.util.UUID
 
 /**
@@ -10,4 +11,4 @@ import java.util.UUID
 data class Project(var title: String? = null,
                    var description: String? = null,
                    var tags: String? = null,
-                   var id: UUID? = null)
+                   var id: UUID? = null) : Serializable

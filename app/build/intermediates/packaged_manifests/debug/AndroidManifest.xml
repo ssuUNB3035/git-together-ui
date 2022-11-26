@@ -9,6 +9,7 @@
         android:targetSdkVersion="32" />
 
     <application
+        android:name="ca.unb.mobiledev.gittogetherui.model.DataHolder"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -33,6 +34,14 @@
         </activity>
         <activity
             android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
+            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+        </activity>
+        <activity
+            android:name="ca.unb.mobiledev.gittogetherui.ui.home.PageActivity"
+            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+        </activity>
+        <activity
+            android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
             android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
         </activity>
 

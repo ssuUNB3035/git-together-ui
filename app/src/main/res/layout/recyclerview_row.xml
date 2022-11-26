@@ -17,6 +17,7 @@
         android:paddingLeft="50px"
         android:paddingRight="50px"/>
     <Button
+        android:id="@+id/remove_project_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="remove"

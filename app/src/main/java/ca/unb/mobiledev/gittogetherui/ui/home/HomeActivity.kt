@@ -1,38 +1,42 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import ca.unb.mobiledev.gittogetherui.R
+import ca.unb.mobiledev.gittogetherui.model.DataHolder
+import ca.unb.mobiledev.gittogetherui.model.Project
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
-import android.widget.Toast
-import ca.unb.mobiledev.gittogetherui.model.Project
-import java.util.ArrayList
 
-class HomeActivity : Activity() {
+
+class HomeActivity : AppCompatActivity() {
     private var al: ArrayList<Project>? = null
-    private var selectedProjects: ArrayList<Project> = ArrayList()
     private var arrayAdapter: CardAdapter? = null
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        val data = applicationContext as DataHolder
+        data.setActivity(this)
 
         //Setting the button events
         var manageButton = findViewById<Button>(R.id.button_manage_home)
         manageButton.setOnClickListener {
-            //val extra = Bundle()
-            //extra.putSerializable("selectedProjects", selectedProjects)
             val intent = Intent(this@HomeActivity, ManageActivity::class.java)
-            //intent.putExtra("extra", extra)
             startActivity(intent)
         }
 
+        var createButton = findViewById<Button>(R.id.buttonCreateProjects)
+        createButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, CreateProjectActivity::class.java)
+            startActivity(intent)
+        }
         // Adding the projects to the swipe cards
         al = ArrayList()
         val jsonUtils = JsonUtils(this)
@@ -59,7 +63,7 @@ class HomeActivity : Activity() {
             }
 
             override fun onRightCardExit(dataObject: Any) {
-                selectedProjects.add(dataObject as Project)
+                data.addSelectedProject(dataObject as Project)
                 //Toast.makeText(this@HomeActivity, "Right!", Toast.LENGTH_SHORT).show()
             }
 

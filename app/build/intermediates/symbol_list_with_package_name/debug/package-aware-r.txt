@@ -2606,6 +2606,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2625,6 +2626,7 @@ id button_manage_home
 id cache_measures
 id callMeasure
 id cancel_button
+id cancel_project_button
 id card_description
 id card_tags
 id card_title
@@ -2651,6 +2653,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id code_link
 id collapseActionView
 id compress
 id confirm_button
@@ -2663,6 +2666,8 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id create_back_button
+id create_project_button
 id currentState
 id custom
 id customPanel
@@ -2674,6 +2679,8 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id desc_field
+id descriptionScroll
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2765,6 +2772,7 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layout_view
 id left
 id leftToRight
 id legacy
@@ -2774,6 +2782,7 @@ id linear
 id listMode
 id list_item
 id loading
+id location_field
 id login
 id manage_back_button
 id masked
@@ -2799,6 +2808,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id member_list
 id message
 id middle
 id mini
@@ -2875,10 +2885,12 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id project_list
+id project_name
 id project_name_row
 id radio
 id ratio
 id rectangles
+id remove_project_button
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2926,6 +2938,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -2972,6 +2985,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2984,6 +2998,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id title_field
 id title_template
 id toggle
 id top
@@ -3113,9 +3128,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create
 layout activity_home
 layout activity_login
 layout activity_manage
+layout activity_page
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
