@@ -1,13 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [androidx.databinding:viewbinding:7.2.2] C:\Users\Samuel Su\.gradle\caches\transforms-3\1fa276032ab76820e9d8fa937653f460\transformed\viewbinding-7.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.1.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\1eb9c4751e14539072d0ae9b69de314e\transformed\fragment-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.0.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\a6931c9b68fe3c0bddb71aac4fc0f66c\transformed\activity-ktx-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\aecbb89cab1588e280482c539450a5e0\transformed\lifecycle-viewmodel-ktx-2.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha05] C:\Users\Samuel Su\.gradle\caches\transforms-3\7e9b23619148e300f04f68104a1b10cb\transformed\lifecycle-runtime-ktx-2.2.0-alpha05\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\ec9386206fb32c4b0f133b4db45ef14f\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Samuel Su\.gradle\caches\transforms-3\04614f8811be566847b06e1adc85b705\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\9305625964053a517641971df20975ff\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
@@ -51,27 +52,31 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\802046e3802353f04a3a3b461791423b\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.lorentzos.swipecards:library:1.0.9] C:\Users\Samuel Su\.gradle\caches\transforms-3\7cf543717d7d896b17c7dd60d1b1651f\transformed\library-1.0.9\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\3b9ce9eab8b49684bf343998e4fa7316\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:5:5-38:19
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:7:5-40:19
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\ec9386206fb32c4b0f133b4db45ef14f\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\ec9386206fb32c4b0f133b4db45ef14f\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Samuel Su\.gradle\caches\transforms-3\04614f8811be566847b06e1adc85b705\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -91,61 +96,61 @@ MERGED from [com.lorentzos.swipecards:library:1.0.9] C:\Users\Samuel Su\.gradle\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\fa579a56dc4a7f6c1402557455e44eec\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:11:9-54
 	android:roundIcon
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:15:9-29
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:14:9-51
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:16:9-51
 	android:dataExtractionRules
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:8:9-65
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:10:9-65
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:6:9-71
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:8:9-71
 activity#ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:16:9-25:20
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:19:13-45
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:21:13-45
 	android:exported
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:17:13-49
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:19:13-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:25:27-74
 activity#ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:26:9-29:20
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:28:9-31:20
 	android:parentActivityName
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:28:13-63
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:30:13-63
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:27:13-51
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:29:13-51
 activity#ca.unb.mobiledev.gittogetherui.ui.home.PageActivity
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:30:9-33:20
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:32:9-35:20
 	android:parentActivityName
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:32:13-63
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:34:13-63
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:31:13-49
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:33:13-49
 activity#ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity
-ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:34:9-37:20
+ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:36:9-39:20
 	android:parentActivityName
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:36:13-63
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:38:13-63
 	android:name
-		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:35:13-58
+		ADDED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:37:13-58
 uses-sdk
 INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml
@@ -158,6 +163,8 @@ MERGED from [androidx.activity:activity-ktx:1.0.0] C:\Users\Samuel Su\.gradle\ca
 MERGED from [androidx.activity:activity-ktx:1.0.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\a6931c9b68fe3c0bddb71aac4fc0f66c\transformed\activity-ktx-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\aecbb89cab1588e280482c539450a5e0\transformed\lifecycle-viewmodel-ktx-2.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\aecbb89cab1588e280482c539450a5e0\transformed\lifecycle-viewmodel-ktx-2.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha05] C:\Users\Samuel Su\.gradle\caches\transforms-3\7e9b23619148e300f04f68104a1b10cb\transformed\lifecycle-runtime-ktx-2.2.0-alpha05\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha05] C:\Users\Samuel Su\.gradle\caches\transforms-3\7e9b23619148e300f04f68104a1b10cb\transformed\lifecycle-runtime-ktx-2.2.0-alpha05\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\ec9386206fb32c4b0f133b4db45ef14f\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\ec9386206fb32c4b0f133b4db45ef14f\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Samuel Su\.gradle\caches\transforms-3\04614f8811be566847b06e1adc85b705\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41

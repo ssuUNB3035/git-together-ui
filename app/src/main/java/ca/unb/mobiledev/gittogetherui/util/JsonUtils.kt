@@ -1,34 +1,34 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import javax.json.stream.JsonParser
-import javax.json.Json
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.io.*
-import java.lang.Exception
-import java.lang.StringBuilder
+import java.lang.Thread.sleep
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
-import java.util.ArrayList
 
 class JsonUtils(context: Context) {
     // Getter method for geoDataArray
     private lateinit var projectList: ArrayList<Project>
+    private lateinit var prevString: String
 
-    private fun processJSON(context: Context) {
+        private fun processJSON(context: Context) {
         // Initialize the data array
         projectList = ArrayList()
 
         // Process the JSON response from the URL
-        //val jsonString = loadJSONFromURL()
-
-        val jsonString = loadJSONFromFile()
+            loadJSONFromURL()
         try {
             val gson = GsonBuilder().create()
-            projectList = gson.fromJson(jsonString, object :
+            projectList = gson.fromJson(prevString, object :
                 TypeToken<ArrayList<Project>>(){}.type)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -39,27 +39,37 @@ class JsonUtils(context: Context) {
         return projectList
     }
 
-    private fun loadJSONFromURL(): String? {
-        val url = URL(REQUEST_URL)
-        var connection: HttpURLConnection? = null
-        try {
-            connection = url.openConnection() as HttpURLConnection?
-            val streamIn = BufferedInputStream(connection?.getInputStream())
-            return convertStreamToString(streamIn)
-        } catch (exception: MalformedURLException) {
-            Log.e(TAG, "MalformedURLException")
-            return null
-        } catch (exception: IOException) {
-            Log.e(TAG, "IOException")
-            return null
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return null
-        } finally {
-            connection?.disconnect()
+    private fun loadJSONFromURL() {
+        GlobalScope.launch(Dispatchers.IO) {
+            val url = URL(REQUEST_URL)
+            val myURLConnection = url.openConnection() as HttpURLConnection
+            try {
+
+                myURLConnection.requestMethod = "GET"
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|aOvSGKamniIrHsnGvEDEVCxpiLi9Yvmasw5Ead3B")
+                myURLConnection.setRequestProperty("Accept", "application/json")
+                myURLConnection.doInput = true
+                myURLConnection.doOutput = false
+
+                val responseCode = myURLConnection.responseCode
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    val streamIn = BufferedInputStream(myURLConnection.inputStream)
+                    val returntest = convertStreamToString(streamIn)
+                    prevString = returntest
+                }
+            } catch (exception: MalformedURLException) {
+                Log.e(TAG, "MalformedURLException")
+            } catch (exception: IOException) {
+                Log.e(TAG, "IOException")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                myURLConnection?.disconnect()
+            }
         }
     }
 
+    // Dummy Method
     private fun loadJSONFromFile(): String? {
         val jsonString: String
         try {
@@ -96,7 +106,7 @@ class JsonUtils(context: Context) {
     companion object {
         private const val TAG = "JsonUtils"
         private const val REQUEST_URL =
-            "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+            "https://gentle-ravine-38100.herokuapp.com/api/projects"
         private const val JSON_KEY_TITLE = "title"
         private const val JSON_KEY_COORDINATES = "coordinates"
     }
