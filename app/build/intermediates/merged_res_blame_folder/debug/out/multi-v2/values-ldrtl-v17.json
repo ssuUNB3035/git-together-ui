@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-32:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-35:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Samuel Su\\.gradle\\caches\\transforms-3\\ec9386206fb32c4b0f133b4db45ef14f\\transformed\\material-1.6.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",

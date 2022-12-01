@@ -53,20 +53,14 @@
 
             <ScrollView
                 android:id="@+id/descriptionScroll"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
-                android:background="#F8F8F8"
-                android:paddingLeft="300dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-            </ScrollView>
+                android:layout_weight="1"
+                android:background="#F8F8F8"/>
 
             <LinearLayout
                 android:id="@+id/member_list"

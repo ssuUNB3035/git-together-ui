@@ -29,7 +29,7 @@ class CardAdapter(private val mContext: Context, list: ArrayList<Project>) :
         val tagsView = listItem!!.findViewById(R.id.card_tags) as TextView
 
         // Need to add location
-        titleView.text = projectList[position]?.title
+        titleView.text = projectList[position]?.name
         descView.text = projectList[position]?.description
         tagsView.text = projectList[position]?.tags
 

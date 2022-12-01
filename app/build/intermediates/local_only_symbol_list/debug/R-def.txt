@@ -40,7 +40,9 @@ id project_list
 id project_name
 id project_name_row
 id remove_project_button
-id spinner
+id tag_box
+id tag_dropdown
+id tag_layout
 id textView
 id title_field
 id username

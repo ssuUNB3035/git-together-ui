@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.gittogetherui.model
 
+import android.location.Location
 import java.io.Serializable
 import java.util.UUID
 
@@ -8,7 +9,9 @@ import java.util.UUID
  * NOTES:
  *  Each value has a getter and setter
  */
-data class Project(var title: String? = null,
+data class Project(var name: String? = null,
                    var description: String? = null,
+                   var location: Location? = null,
                    var tags: String? = null,
+                   var link: String? = null,
                    var id: UUID? = null) : Serializable

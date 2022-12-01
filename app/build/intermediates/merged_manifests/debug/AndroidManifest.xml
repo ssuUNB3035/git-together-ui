@@ -9,6 +9,8 @@
         android:targetSdkVersion="32" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name="ca.unb.mobiledev.gittogetherui.model.DataHolder"
@@ -46,6 +48,14 @@
             android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
             android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
         </activity>
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

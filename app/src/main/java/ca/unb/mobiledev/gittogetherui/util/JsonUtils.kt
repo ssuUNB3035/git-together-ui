@@ -28,7 +28,7 @@ class JsonUtils(context: Context) {
             loadJSONFromURL()
         try {
             val gson = GsonBuilder().create()
-            projectList = gson.fromJson(prevString, object :
+            projectList = gson.fromJson(loadJSONFromFile(), object :
                 TypeToken<ArrayList<Project>>(){}.type)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -73,7 +73,7 @@ class JsonUtils(context: Context) {
     private fun loadJSONFromFile(): String? {
         val jsonString: String
         try {
-            jsonString = """[{"title":"New Project #1","description":"A new project!","tags":"c# c++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8"},{"title":"New Project #2","description":"A second new project!","tags":"java c++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c"},{"title":"New Project #3","description":"A third new project!","tags":"kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7"}]"""
+            jsonString = """[{"name":"New Project #1","description":"A new project!","tags":"c# c++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8"},{"name":"New Project #2","description":"A second new project!","tags":"java c++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c"},{"name":"New Project #3","description":"A third new project!","tags":"kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7"}]"""
 
         } catch (ioException: IOException) {
             ioException.printStackTrace()

@@ -19,7 +19,7 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var onItemClick: ((Project) -> Unit)? = null
 
     fun bind(project: Project, context: Context) {
-        projectName.text = project.title
+        projectName.text = project.name
         bindedProject = project
         data = context as DataHolder
 
@@ -28,7 +28,7 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             data.getListAdapter().setProjectsList(data.getSelectedProjects())
         }
 
-        bindOrHideTextView(projectName, project.title)
+        bindOrHideTextView(projectName, project.name)
     }
 
     private fun bindOrHideTextView(textView: TextView, data: String?) {

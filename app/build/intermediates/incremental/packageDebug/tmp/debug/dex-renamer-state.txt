@@ -1,8 +1,10 @@
-#Sat Nov 26 13:35:41 AST 2022
+#Thu Dec 01 12:20:45 AST 2022
 path.4=14/classes.dex
 path.3=13/classes.dex
 path.2=10/classes.dex
 path.1=0/classes.dex
+renamed.8=classes9.dex
+path.8=classes2.dex
 path.7=9/classes.dex
 path.6=2/classes.dex
 path.5=15/classes.dex
@@ -17,6 +19,7 @@ renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 renamed.7=classes8.dex
+base.8=C\:\\Users\\Samuel Su\\AndroidStudioProjects\\GitTogetherUI\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 renamed.6=classes7.dex
 base.7=C\:\\Users\\Samuel Su\\AndroidStudioProjects\\GitTogetherUI\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 renamed.5=classes6.dex

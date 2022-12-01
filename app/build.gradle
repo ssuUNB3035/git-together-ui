@@ -53,4 +53,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha05"
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
 }
