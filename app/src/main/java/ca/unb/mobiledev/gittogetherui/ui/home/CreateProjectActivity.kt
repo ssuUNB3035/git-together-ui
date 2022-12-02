@@ -1,25 +1,28 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 import android.Manifest
 import android.annotation.SuppressLint
+import android.view.ViewGroup.LayoutParams;
 import android.app.Activity
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.Spinner
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import ca.unb.mobiledev.gittogetherui.R
+import ca.unb.mobiledev.gittogetherui.model.DataHolder
+import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.selects.select
 import kotlinx.coroutines.withContext
 import java.util.*
 
@@ -32,6 +35,9 @@ class CreateProjectActivity : Activity() {
     private lateinit var locationEntry: TextInputEditText
     private lateinit var tagDropdown: Spinner
     private lateinit var tagLayout: LinearLayout
+    private var selectedTags: ArrayList<String> = ArrayList()
+
+    lateinit var data: DataHolder
 
     var context = this
 
@@ -39,6 +45,8 @@ class CreateProjectActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create)
+
+        data = applicationContext as DataHolder
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -49,6 +57,10 @@ class CreateProjectActivity : Activity() {
         var cancel = findViewById<Button>(R.id.cancel_project_button)
         cancel.setOnClickListener {
             finish()
+        }
+        var create = findViewById<Button>(R.id.create_project_button)
+        create.setOnClickListener {
+            createProject()
         }
 
         titleEntry = findViewById(R.id.title_field)
@@ -61,6 +73,68 @@ class CreateProjectActivity : Activity() {
         locationEntry.hint = "city, province/state, country"
 
         getCurrentLocation()
+
+        val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
+            applicationContext,
+            android.R.layout.simple_spinner_dropdown_item,
+            data.getAvailableTags()
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        tagDropdown.setAdapter(adapter)
+
+        tagDropdown.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            @SuppressLint("ResourceType")
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                if (!selectedTags.contains(data.availableTags.get(position))) {
+                    var tagText = data.availableTags.get(position)
+                    var btn = Button(context)
+                    btn.text = tagText
+                    btn.setBackgroundColor(Color.BLUE)
+                    btn.setTextColor(Color.WHITE)
+                    btn.width = LayoutParams.WRAP_CONTENT
+                    btn.height = LayoutParams.WRAP_CONTENT
+
+                    selectedTags.add(tagText)
+                    tagLayout.addView(btn)
+                    var space: Space = Space(context)
+                    space.minimumWidth = 5
+                    tagLayout.addView(space)
+                    btn.setOnClickListener {
+                        tagLayout.removeView(btn)
+                        tagLayout.removeView(space)
+                        selectedTags.remove(tagText)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                // Nothing
+            }
+
+        }
+    }
+
+    fun createProject() {
+        if (titleEntry.text.toString() == ""
+            || descEntry.text.toString() == ""
+            || locationEntry.text.toString() == ""
+            || selectedTags.size == 0) {
+            Toast.makeText(context, "Please fill out all fields", Toast.LENGTH_SHORT)
+        }
+        else {
+            var newProject = Project()
+            newProject.name = titleEntry.text.toString()
+            newProject.description = descEntry.text.toString()
+            newProject.location = locationEntry.text.toString()
+            newProject.tags = selectedTags.toString()
+            newProject.link = "https://github.com/ssuUNB3035/git-together-ui/tree/samtest"
+            newProject.id = UUID.randomUUID()
+            data.addSelectedProject(newProject)
+
+            // Send project to database, could pass this through a jsonutils call
+            finish()
+        }
     }
 
     @SuppressLint("SetTextI18n")

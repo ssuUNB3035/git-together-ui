@@ -40,9 +40,8 @@ class HomeActivity : AppCompatActivity() {
         // Adding the projects to the swipe cards
         al = ArrayList()
         val jsonUtils = JsonUtils(this)
-        al = jsonUtils.getProjectList()
 
-        arrayAdapter = CardAdapter(this, al!!)
+        arrayAdapter = CardAdapter(this, data.getProjectList()!!)
 
         val flingContainer = findViewById<View>(R.id.frame) as SwipeFlingAdapterView
         flingContainer.adapter = arrayAdapter
@@ -51,7 +50,7 @@ class HomeActivity : AppCompatActivity() {
             override fun removeFirstObjectInAdapter() {
                 // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 Log.d("LIST", "removed object!")
-                al!!.removeAt(0)
+                data.getProjectList()!!.removeAt(0)
                 arrayAdapter!!.notifyDataSetChanged()
             }
 

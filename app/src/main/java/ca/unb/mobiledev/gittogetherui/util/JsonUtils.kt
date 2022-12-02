@@ -3,6 +3,7 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -19,8 +20,10 @@ class JsonUtils(context: Context) {
     // Getter method for geoDataArray
     private lateinit var projectList: ArrayList<Project>
     private lateinit var prevString: String
+    lateinit var data: DataHolder
 
         private fun processJSON(context: Context) {
+            data = context.applicationContext as DataHolder
         // Initialize the data array
         projectList = ArrayList()
 
@@ -32,6 +35,11 @@ class JsonUtils(context: Context) {
                 TypeToken<ArrayList<Project>>(){}.type)
         } catch (e: Exception) {
             e.printStackTrace()
+    }
+        for (i in projectList) {
+            if (!data.getProjectList().contains(i)) {
+                data.addProject(i)
+            }
         }
     }
 
@@ -55,7 +63,20 @@ class JsonUtils(context: Context) {
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     val streamIn = BufferedInputStream(myURLConnection.inputStream)
                     val returntest = convertStreamToString(streamIn)
-                    prevString = returntest
+                    var tempList: ArrayList<Project> = ArrayList()
+                    try {
+                        val gson = GsonBuilder().create()
+                        tempList = gson.fromJson(loadJSONFromFile(), object :
+                            TypeToken<ArrayList<Project>>(){}.type)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                    for (i in tempList) {
+                        if (!data.getProjectList().contains(i)) {
+                            data.addProject(i)
+                        }
+                    }
+
                 }
             } catch (exception: MalformedURLException) {
                 Log.e(TAG, "MalformedURLException")

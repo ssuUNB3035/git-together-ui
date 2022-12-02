@@ -11,6 +11,7 @@ dimen activity_horizontal_margin
 dimen activity_vertical_margin
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable rounded_corner
 id back_button
 id buttonBar
 id buttonCreateProjects
@@ -43,6 +44,7 @@ id remove_project_button
 id tag_box
 id tag_dropdown
 id tag_layout
+id tag_pill
 id textView
 id title_field
 id username
@@ -53,6 +55,7 @@ layout activity_manage
 layout activity_page
 layout item
 layout recyclerview_row
+layout tag_pill
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_sign_in

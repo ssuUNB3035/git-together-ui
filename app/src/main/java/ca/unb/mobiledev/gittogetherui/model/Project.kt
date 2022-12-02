@@ -11,7 +11,7 @@ import java.util.UUID
  */
 data class Project(var name: String? = null,
                    var description: String? = null,
-                   var location: Location? = null,
+                   var location: String? = null,
                    var tags: String? = null,
                    var link: String? = null,
                    var id: UUID? = null) : Serializable
