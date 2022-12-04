@@ -12,6 +12,11 @@ dimen activity_vertical_margin
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable rounded_corner
+id addProjectButton
+id addProjectsAdd
+id addProjectsCancel
+id addProjectsHeader
+id addProjectsInput
 id back_button
 id buttonBar
 id buttonCreateProjects
@@ -31,6 +36,7 @@ id frame
 id item_swipe_left_indicator
 id item_swipe_right_indicator
 id layout_view
+id link_field
 id loading
 id location_field
 id login
@@ -53,6 +59,7 @@ layout activity_home
 layout activity_login
 layout activity_manage
 layout activity_page
+layout addprojectfragment
 layout item
 layout recyclerview_row
 layout tag_pill

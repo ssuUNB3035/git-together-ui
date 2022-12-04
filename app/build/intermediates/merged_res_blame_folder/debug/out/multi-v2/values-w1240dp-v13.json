@@ -4,7 +4,7 @@
             "outputFile": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-35:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\blued\\AndroidStudioProjects\\git-together-ui\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\Users\\Samuel Su\\AndroidStudioProjects\\GitTogetherUI\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

@@ -37,6 +37,7 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this@HomeActivity, CreateProjectActivity::class.java)
             startActivity(intent)
         }
+
         // Adding the projects to the swipe cards
         al = ArrayList()
         val jsonUtils = JsonUtils(this)
@@ -48,27 +49,18 @@ class HomeActivity : AppCompatActivity() {
 
         flingContainer.setFlingListener(object : onFlingListener {
             override fun removeFirstObjectInAdapter() {
-                // this is the simplest way to delete an object from the Adapter (/AdapterView)
-                Log.d("LIST", "removed object!")
                 data.getProjectList()!!.removeAt(0)
                 arrayAdapter!!.notifyDataSetChanged()
             }
 
             override fun onLeftCardExit(dataObject: Any) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
-                //Toast.makeText(this@HomeActivity, "Left!", Toast.LENGTH_SHORT).show()
             }
 
             override fun onRightCardExit(dataObject: Any) {
                 data.addSelectedProject(dataObject as Project)
-                //Toast.makeText(this@HomeActivity, "Right!", Toast.LENGTH_SHORT).show()
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
-                // Ask for more data here
-                //al!!.add("XML $i")
                 arrayAdapter!!.notifyDataSetChanged()
                 Log.d("LIST", "notified")
                 i++
@@ -77,8 +69,6 @@ class HomeActivity : AppCompatActivity() {
             override fun onScroll(scrollProgressPercent: Float) {}
         })
 
-
-        // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener { itemPosition, dataObject ->
             Toast.makeText(
                 this@HomeActivity,

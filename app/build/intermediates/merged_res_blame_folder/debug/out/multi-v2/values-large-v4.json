@@ -4,7 +4,7 @@
             "outputFile": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-35:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\86f96b00c7cb73def924c58d74ff7ebd\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Samuel Su\\.gradle\\caches\\transforms-3\\86f96b00c7cb73def924c58d74ff7ebd\\transformed\\appcompat-1.5.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\ec9386206fb32c4b0f133b4db45ef14f\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Samuel Su\\.gradle\\caches\\transforms-3\\ec9386206fb32c4b0f133b4db45ef14f\\transformed\\material-1.6.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",

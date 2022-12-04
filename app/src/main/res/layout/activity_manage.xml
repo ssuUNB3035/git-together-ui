@@ -13,11 +13,29 @@
         android:paddingTop="20dp"
         android:paddingRight="25dp">
 
-        <Button
-            android:id="@+id/manage_back_button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Back" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/manage_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/addProjectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Add Project" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout_view"
@@ -37,11 +55,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:paddingTop="50dp"
+                android:paddingTop="20dp"
                 app:layoutManager="LinearLayoutManager">
 
             </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
 
+
 class ManageActivity : AppCompatActivity() {
     private lateinit var projectsRecyclerView: RecyclerView
     private lateinit var projectsListAdapter: ProjectListAdapter
@@ -33,6 +34,12 @@ class ManageActivity : AppCompatActivity() {
             finish()
         }
 
+        var addProject = findViewById<Button>(R.id.addProjectButton)
+        addProject.setOnClickListener {
+            var dialog = AddProjectsFragment()
+
+            dialog.show(supportFragmentManager, "addProjectDialog")
+        }
 
     }
 }
