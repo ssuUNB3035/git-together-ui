@@ -9,6 +9,7 @@ import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.app.ActivityCompat
@@ -19,11 +20,16 @@ import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.textfield.TextInputEditText
+import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
 import kotlinx.coroutines.withContext
+import java.io.DataOutputStream
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.MalformedURLException
+import java.net.URL
 import java.util.*
 
 
@@ -132,8 +138,41 @@ class CreateProjectActivity : Activity() {
             newProject.id = UUID.randomUUID()
             data.addSelectedProject(newProject)
 
-            // Send project to database, could pass this through a jsonutils call
+            postCall(newProject)
             finish()
+        }
+    }
+
+    private fun postCall(project: Project) {
+        GlobalScope.launch(Dispatchers.IO) {
+            val url = URL("https://gentle-ravine-38100.herokuapp.com/api/project")
+            val myURLConnection = url.openConnection() as HttpURLConnection
+            try {
+
+                myURLConnection.requestMethod = "POST"
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|aOvSGKamniIrHsnGvEDEVCxpiLi9Yvmasw5Ead3B")
+                myURLConnection.setRequestProperty("Accept", "application/json")
+                myURLConnection.doInput = true
+                myURLConnection.doOutput = false
+
+                val jsonObject: String = Gson().toJson(project, Project::class.java)
+                DataOutputStream(myURLConnection.outputStream).use { it.writeBytes(jsonObject) }
+
+                val responseCode = myURLConnection.responseCode
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    if (!data.getProjectList().contains(project)) {
+                        data.addSelectedProject(project)
+                    }
+                }
+            } catch (exception: MalformedURLException) {
+                Log.e("Create Error", "MalformedURLException")
+            } catch (exception: IOException) {
+                Log.e("Create Error", "IOException")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                myURLConnection?.disconnect()
+            }
         }
     }
 
@@ -195,5 +234,11 @@ class CreateProjectActivity : Activity() {
                 return
             }
         }
+    }
+
+    companion object {
+        private const val TAG = "CreateProject"
+        private const val REQUEST_URL =
+            "https://gentle-ravine-38100.herokuapp.com/api/project"
     }
 }

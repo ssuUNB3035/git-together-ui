@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
-    android:layout_height="400dp"
-    android:layout_gravity="center">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginTop="200dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginBottom="200dp"
+    android:background="@drawable/rounded_corner">
 
     <TextView
         android:id="@+id/card_description"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E339"
+        android:background="#EE2166A3"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="25sp"
@@ -19,7 +25,7 @@
         android:id="@+id/card_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E339"
+        android:background="@drawable/rounded_corner"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="30sp"
@@ -29,13 +35,12 @@
         android:id="@+id/card_tags"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#E339"
-        android:gravity="center|start"
+        android:layout_gravity="bottom"
+        android:background="#EE1756C5"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:translationY="370dp"
         tools:text="java, c#" />
 
     <View

@@ -14,4 +14,6 @@ data class Project(var name: String? = null,
                    var location: String? = null,
                    var tags: String? = null,
                    var link: String? = null,
-                   var id: UUID? = null) : Serializable
+                   var id: UUID? = null,
+                   var members: List<String>? = null,
+                   var hash: String? = null) : Serializable

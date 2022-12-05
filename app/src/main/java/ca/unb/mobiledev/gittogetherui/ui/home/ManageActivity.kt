@@ -13,7 +13,6 @@ import ca.unb.mobiledev.gittogetherui.model.Project
 class ManageActivity : AppCompatActivity() {
     private lateinit var projectsRecyclerView: RecyclerView
     private lateinit var projectsListAdapter: ProjectListAdapter
-    private var liveProjectList = ArrayList<Project>()
     lateinit var data: DataHolder
 
     override fun onCreate(savedInstanceState: Bundle?) {

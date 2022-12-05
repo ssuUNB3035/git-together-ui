@@ -17,12 +17,13 @@ import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
 class HomeActivity : AppCompatActivity() {
     private var al: ArrayList<Project>? = null
     private var arrayAdapter: CardAdapter? = null
+    lateinit var data: DataHolder
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val data = applicationContext as DataHolder
+        data = applicationContext as DataHolder
         data.setActivity(this)
 
         //Setting the button events
@@ -49,15 +50,19 @@ class HomeActivity : AppCompatActivity() {
 
         flingContainer.setFlingListener(object : onFlingListener {
             override fun removeFirstObjectInAdapter() {
-                data.getProjectList()!!.removeAt(0)
+                if (data.getProjectList().size != 0) {
+                    data.getProjectList()!!.removeAt(0)
+                }
                 arrayAdapter!!.notifyDataSetChanged()
             }
 
             override fun onLeftCardExit(dataObject: Any) {
+                arrayAdapter!!.remove(dataObject as Project)
             }
 
             override fun onRightCardExit(dataObject: Any) {
                 data.addSelectedProject(dataObject as Project)
+                arrayAdapter!!.remove(dataObject as Project)
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
@@ -76,5 +81,21 @@ class HomeActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+
+        var filterButton = findViewById<Button>(R.id.filterProjectsHome)
+        filterButton.setOnClickListener {
+            var dialog = FilterProjectsFragment()
+
+            dialog.show(supportFragmentManager, "filterProjectsFragment")
+        }
+    }
+
+    fun updateArrayAdapter() {
+        arrayAdapter?.clear()
+        for (p: Project in data.projectList) {
+            arrayAdapter?.insert(p, arrayAdapter!!.count)
+        }
+
+        arrayAdapter?.notifyDataSetChanged()
     }
 }

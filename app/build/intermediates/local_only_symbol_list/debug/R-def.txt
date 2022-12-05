@@ -32,6 +32,13 @@ id create_back_button
 id create_project_button
 id desc_field
 id descriptionScroll
+id filterProjectsCancel
+id filterProjectsFilter
+id filterProjectsHeader
+id filterProjectsHome
+id filterProjectsTagLayout
+id filterprojectstagbox
+id filtertagdropdown
 id frame
 id item_swipe_left_indicator
 id item_swipe_right_indicator
@@ -60,6 +67,7 @@ layout activity_login
 layout activity_manage
 layout activity_page
 layout addprojectfragment
+layout filterprojectsfragment
 layout item
 layout recyclerview_row
 layout tag_pill

@@ -19,7 +19,6 @@ import java.net.URL
 class JsonUtils(context: Context) {
     // Getter method for geoDataArray
     private lateinit var projectList: ArrayList<Project>
-    private lateinit var prevString: String
     lateinit var data: DataHolder
 
         private fun processJSON(context: Context) {
@@ -43,10 +42,6 @@ class JsonUtils(context: Context) {
         }
     }
 
-    fun getProjectList(): ArrayList<Project> {
-        return projectList
-    }
-
     private fun loadJSONFromURL() {
         GlobalScope.launch(Dispatchers.IO) {
             val url = URL(REQUEST_URL)
@@ -66,7 +61,7 @@ class JsonUtils(context: Context) {
                     var tempList: ArrayList<Project> = ArrayList()
                     try {
                         val gson = GsonBuilder().create()
-                        tempList = gson.fromJson(loadJSONFromFile(), object :
+                        tempList = gson.fromJson(returntest, object :
                             TypeToken<ArrayList<Project>>(){}.type)
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -76,6 +71,7 @@ class JsonUtils(context: Context) {
                             data.addProject(i)
                         }
                     }
+                    data.getActivity().updateArrayAdapter()
 
                 }
             } catch (exception: MalformedURLException) {
@@ -94,7 +90,7 @@ class JsonUtils(context: Context) {
     private fun loadJSONFromFile(): String? {
         val jsonString: String
         try {
-            jsonString = """[{"name":"New Project #1","description":"A new project!","tags":"c# c++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8"},{"name":"New Project #2","description":"A second new project!","tags":"java c++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c"},{"name":"New Project #3","description":"A third new project!","tags":"kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7"}]"""
+            jsonString = """[{"name":"New Project #1","description":"A new project!","tags":"C# C++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8"},{"name":"New Project #2","description":"A second new project!","tags":"Java C++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c"},{"name":"New Project #3","description":"A third new project!","tags":"Kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7"}]"""
 
         } catch (ioException: IOException) {
             ioException.printStackTrace()

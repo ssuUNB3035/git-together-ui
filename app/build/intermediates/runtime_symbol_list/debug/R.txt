@@ -2779,6 +2779,13 @@ int id fill 0x7f0800d0
 int id fill_horizontal 0x7f0800d1
 int id fill_vertical 0x7f0800d2
 int id filled 0x7f0800d3
+int id filterProjectsCancel 0x7f08021a
+int id filterProjectsFilter 0x7f08021b
+int id filterProjectsHeader 0x7f08021c
+int id filterProjectsHome 0x7f08021d
+int id filterProjectsTagLayout 0x7f080220
+int id filterprojectstagbox 0x7f08021e
+int id filtertagdropdown 0x7f08021f
 int id fitCenter 0x7f0800d4
 int id fitEnd 0x7f0800d5
 int id fitStart 0x7f0800d6
@@ -3214,6 +3221,7 @@ int layout design_navigation_menu 0x7f0b002d
 int layout design_navigation_menu_item 0x7f0b002e
 int layout design_text_input_end_icon 0x7f0b002f
 int layout design_text_input_start_icon 0x7f0b0030
+int layout filterprojectsfragment 0x7f0b0088
 int layout item 0x7f0b0031
 int layout m3_alert_dialog 0x7f0b0032
 int layout m3_alert_dialog_actions 0x7f0b0033

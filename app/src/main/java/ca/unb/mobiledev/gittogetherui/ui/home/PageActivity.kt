@@ -8,10 +8,8 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
-import org.w3c.dom.Text
 
 class PageActivity : AppCompatActivity(){
     lateinit var data: DataHolder

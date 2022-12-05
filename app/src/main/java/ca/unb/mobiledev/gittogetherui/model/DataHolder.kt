@@ -6,6 +6,7 @@ import ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity
 
 
 class DataHolder : Application() {
+    var unFilteredProjects: ArrayList<Project> = ArrayList()
     var projectList: ArrayList<Project> = ArrayList()
     var selectedProjectList : ArrayList<Project> = ArrayList()
     var focusedProject: Project = Project()
@@ -39,6 +40,19 @@ class DataHolder : Application() {
         }
         return availableTags
     }
+
+    fun filterProjects(tags: ArrayList<String>) {
+        projectList = ArrayList()
+        for (p: Project in unFilteredProjects) {
+            for (t: String in tags) {
+                if (p.tags?.contains(t) == true) {
+                    projectList.add(p)
+                    break
+                }
+            }
+        }
+    }
+
     fun addSelectedProject(p : Project) {
         selectedProjectList.add(p)
     }
@@ -61,6 +75,7 @@ class DataHolder : Application() {
 
     fun addProject(p: Project) {
         projectList.add(p)
+        unFilteredProjects.add(p)
     }
 
     @JvmName("getProjectList1")

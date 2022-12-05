@@ -34,16 +34,21 @@ public final class ActivityHomeBinding implements ViewBinding {
   public final Button buttonProfile;
 
   @NonNull
+  public final Button filterProjectsHome;
+
+  @NonNull
   public final SwipeFlingAdapterView frame;
 
   private ActivityHomeBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout buttonBar,
       @NonNull Button buttonCreateProjects, @NonNull Button buttonManageHome,
-      @NonNull Button buttonProfile, @NonNull SwipeFlingAdapterView frame) {
+      @NonNull Button buttonProfile, @NonNull Button filterProjectsHome,
+      @NonNull SwipeFlingAdapterView frame) {
     this.rootView = rootView;
     this.buttonBar = buttonBar;
     this.buttonCreateProjects = buttonCreateProjects;
     this.buttonManageHome = buttonManageHome;
     this.buttonProfile = buttonProfile;
+    this.filterProjectsHome = filterProjectsHome;
     this.frame = frame;
   }
 
@@ -98,6 +103,12 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.filterProjectsHome;
+      Button filterProjectsHome = ViewBindings.findChildViewById(rootView, id);
+      if (filterProjectsHome == null) {
+        break missingId;
+      }
+
       id = R.id.frame;
       SwipeFlingAdapterView frame = ViewBindings.findChildViewById(rootView, id);
       if (frame == null) {
@@ -105,7 +116,7 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
 
       return new ActivityHomeBinding((ConstraintLayout) rootView, buttonBar, buttonCreateProjects,
-          buttonManageHome, buttonProfile, frame);
+          buttonManageHome, buttonProfile, filterProjectsHome, frame);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

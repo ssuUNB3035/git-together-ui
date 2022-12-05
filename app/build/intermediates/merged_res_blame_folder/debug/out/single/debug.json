@@ -4,6 +4,14 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-pngs-32:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_filterprojectsfragment.xml.flat",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\filterprojectsfragment.xml"
+    },
+    {
+        "merged": "ca.unb.mobiledev.gittogetherui.app-merged_res-37:/layout_item.xml.flat",
+        "source": "ca.unb.mobiledev.gittogetherui.app-main-39:/layout/item.xml"
+    },
+    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -36,10 +44,6 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_home.xml"
     },
     {
-        "merged": "ca.unb.mobiledev.gittogetherui.app-merged_res-37:/layout_activity_home.xml.flat",
-        "source": "ca.unb.mobiledev.gittogetherui.app-main-39:/layout/activity_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -52,12 +56,12 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\recyclerview_row.xml"
     },
     {
-        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_tag_pill.xml.flat",
-        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\tag_pill.xml"
-    },
-    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_tag_pill.xml.flat",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\tag_pill.xml"
     },
     {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_item.xml.flat",
@@ -88,12 +92,12 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_addprojectfragment.xml.flat",
-        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\addprojectfragment.xml"
-    },
-    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_activity_create.xml.flat",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_create.xml"
+    },
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_addprojectfragment.xml.flat",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\addprojectfragment.xml"
     },
     {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-merged_res-37:\\layout_activity_manage.xml.flat",
