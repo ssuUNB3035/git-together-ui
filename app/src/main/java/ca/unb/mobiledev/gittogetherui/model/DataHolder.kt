@@ -12,6 +12,7 @@ class DataHolder : Application() {
     var mainActivity: HomeActivity = HomeActivity()
     val availableTags: ArrayList<String> = ArrayList()
     private lateinit var projectListAdapter: ProjectListAdapter
+    var user: User = User()
 
     @JvmName("getAvailableTags1")
     fun getAvailableTags(): ArrayList<String> {
@@ -75,6 +76,17 @@ class DataHolder : Application() {
     fun getActivity(): HomeActivity {
         return mainActivity
     }
+
+    @JvmName("setUser1")
+    fun setUser(userIn: User) {
+        user = userIn
+    }
+
+    @JvmName("getUser1")
+    fun getUser(): User {
+        return user
+    }
+
 
     fun setListAdapter(p: ProjectListAdapter) {
         projectListAdapter = p
