@@ -4,8 +4,8 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_home.xml"
     },
     {
-        "merged": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:/layout/item.xml",
-        "source": "ca.unb.mobiledev.gittogetherui.app-main-39:/layout/item.xml"
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_profile.xml"
     },
     {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\activity_login.xml",
@@ -20,10 +20,6 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\filterprojectsfragment.xml"
     },
     {
-        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\addprojectfragment.xml",
-        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\addprojectfragment.xml"
-    },
-    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\recyclerview_row.xml",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\recyclerview_row.xml"
     },
@@ -36,11 +32,19 @@
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\item.xml"
     },
     {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\activity_page.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_page.xml"
+    },
+    {
         "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\activity_create.xml",
         "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_create.xml"
     },
     {
-        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\activity_page.xml",
-        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\activity_page.xml"
+        "merged": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:/layout/activity_profile.xml",
+        "source": "ca.unb.mobiledev.gittogetherui.app-main-39:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-36:\\layout\\addprojectfragment.xml",
+        "source": "C:\\Users\\Samuel Su\\.gradle\\daemon\\7.4\\ca.unb.mobiledev.gittogetherui.app-main-39:\\layout\\addprojectfragment.xml"
     }
 ]

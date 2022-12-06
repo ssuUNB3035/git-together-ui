@@ -28,6 +28,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.home.EditProfileActivity"
+            android:parentActivityName=".ui.home.EditProfileActivity">
+        </activity>
+        <activity
             android:name=".ui.home.ManageActivity"
             android:parentActivityName=".ui.home.HomeActivity">
         </activity>

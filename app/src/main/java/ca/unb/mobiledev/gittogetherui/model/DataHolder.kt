@@ -7,12 +7,14 @@ import ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity
 
 class DataHolder : Application() {
     var unFilteredProjects: ArrayList<Project> = ArrayList()
+    var staticProjectsList: ArrayList<Project> = ArrayList()
     var projectList: ArrayList<Project> = ArrayList()
     var selectedProjectList : ArrayList<Project> = ArrayList()
     var focusedProject: Project = Project()
     var mainActivity: HomeActivity = HomeActivity()
     val availableTags: ArrayList<String> = ArrayList()
     private lateinit var projectListAdapter: ProjectListAdapter
+    var user: User = User()
 
     @JvmName("getAvailableTags1")
     fun getAvailableTags(): ArrayList<String> {
@@ -42,12 +44,14 @@ class DataHolder : Application() {
     }
 
     fun filterProjects(tags: ArrayList<String>) {
-        projectList = ArrayList()
         for (p: Project in unFilteredProjects) {
-            for (t: String in tags) {
-                if (p.tags?.contains(t) == true) {
-                    projectList.add(p)
-                    break
+            if (p.tags != null) {
+                var tagsArray: List<String> = p.tags!!.split(" ")
+                for (t: String in tags) {
+                    if (tagsArray.contains(t)) {
+                        break
+                    }
+                    projectList.remove(p)
                 }
             }
         }
@@ -75,6 +79,7 @@ class DataHolder : Application() {
 
     fun addProject(p: Project) {
         projectList.add(p)
+        staticProjectsList.add(p)
         unFilteredProjects.add(p)
     }
 
@@ -89,6 +94,16 @@ class DataHolder : Application() {
 
     fun getActivity(): HomeActivity {
         return mainActivity
+    }
+
+    @JvmName("setUser1")
+    fun setUser(userIn: User) {
+        user = userIn
+    }
+
+    @JvmName("getUser1")
+    fun getUser(): User {
+        return user
     }
 
     fun setListAdapter(p: ProjectListAdapter) {

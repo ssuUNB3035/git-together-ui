@@ -75,9 +75,6 @@ class CreateProjectActivity : Activity() {
         tagDropdown = findViewById(R.id.tag_dropdown)
         tagLayout = findViewById(R.id.tag_layout)
 
-
-        locationEntry.hint = "city, province/state, country"
-
         getCurrentLocation()
 
         val adapter: ArrayAdapter<String> = ArrayAdapter<String>(

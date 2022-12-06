@@ -13,7 +13,10 @@ import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import java.util.ArrayList
 
-
+/*
+    Filter Projects Dialog
+    Users may select tags to filter the projects on the homepage
+ */
 class FilterProjectsFragment: DialogFragment() {
     lateinit var data: DataHolder
     private var selectedTags: ArrayList<String> = ArrayList()

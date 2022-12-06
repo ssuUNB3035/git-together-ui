@@ -10,10 +10,16 @@ import androidx.appcompat.app.AppCompatActivity
 import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
+import ca.unb.mobiledev.gittogetherui.model.User
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
+import java.util.*
+import kotlin.collections.ArrayList
 
-
+/*
+    Homepage of the Application
+    Users may access the 'Edit Profile' page, 'Manage Profile' page, and 'Create Project' page here
+ */
 class HomeActivity : AppCompatActivity() {
     private var al: ArrayList<Project>? = null
     private var arrayAdapter: CardAdapter? = null
@@ -26,7 +32,21 @@ class HomeActivity : AppCompatActivity() {
         data = applicationContext as DataHolder
         data.setActivity(this)
 
+        // Dummy User data
+        var newUser: User = User()
+        newUser.id = UUID.fromString("b0ff4b6a-74ef-11ed-a1eb-0242ac120002")
+        newUser.name = "Samuel Su"
+        newUser.bio = "Hello!"
+        newUser.email = "ssu@unb.ca"
+        newUser.location = "Fredericton, New Brunswick, Canada"
+
         //Setting the button events
+        var profileButton = findViewById<Button>(R.id.buttonProfile)
+        profileButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
         var manageButton = findViewById<Button>(R.id.button_manage_home)
         manageButton.setOnClickListener {
             val intent = Intent(this@HomeActivity, ManageActivity::class.java)
@@ -50,18 +70,18 @@ class HomeActivity : AppCompatActivity() {
 
         flingContainer.setFlingListener(object : onFlingListener {
             override fun removeFirstObjectInAdapter() {
-                if (data.getProjectList().size != 0) {
-                    data.getProjectList()!!.removeAt(0)
-                }
-                arrayAdapter!!.notifyDataSetChanged()
+                // Nothing
             }
 
             override fun onLeftCardExit(dataObject: Any) {
                 arrayAdapter!!.remove(dataObject as Project)
+                data.unFilteredProjects.remove(dataObject as Project)
             }
 
             override fun onRightCardExit(dataObject: Any) {
-                data.addSelectedProject(dataObject as Project)
+                if (data.getProjectList().contains(dataObject as Project)) {
+                    data.addSelectedProject(dataObject as Project)
+                }
                 arrayAdapter!!.remove(dataObject as Project)
             }
 
@@ -91,11 +111,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun updateArrayAdapter() {
-        arrayAdapter?.clear()
-        for (p: Project in data.projectList) {
-            arrayAdapter?.insert(p, arrayAdapter!!.count)
-        }
-
-        arrayAdapter?.notifyDataSetChanged()
+        arrayAdapter!!.notifyDataSetChanged()
     }
 }

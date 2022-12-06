@@ -60,7 +60,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
                 android:layout_weight="1"
-                android:background="#F8F8F8"/>
+                android:background="#F8F8F8"
+                android:padding="10dp" />
 
             <LinearLayout
                 android:id="@+id/member_list"

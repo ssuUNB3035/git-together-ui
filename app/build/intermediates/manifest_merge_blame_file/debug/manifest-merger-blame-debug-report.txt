@@ -21,7 +21,7 @@
 13-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:7:22-76
 14
 15    <application
-15-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:9:5-42:19
+15-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:9:5-46:19
 16        android:name="ca.unb.mobiledev.gittogetherui.model.DataHolder"
 16-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:10:9-71
 17        android:allowBackup="true"
@@ -66,62 +66,69 @@
 38        </activity>
 39        <activity
 39-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:30:9-33:20
-40            android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
-40-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:31:13-51
-41            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
-41-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:32:13-63
+40            android:name="ca.unb.mobiledev.gittogetherui.ui.home.EditProfileActivity"
+40-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:31:13-56
+41            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.EditProfileActivity" >
+41-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:32:13-70
 42        </activity>
 43        <activity
 43-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:34:9-37:20
-44            android:name="ca.unb.mobiledev.gittogetherui.ui.home.PageActivity"
-44-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:35:13-49
+44            android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
+44-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:35:13-51
 45            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
 45-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:36:13-63
 46        </activity>
 47        <activity
 47-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:38:9-41:20
-48            android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
-48-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:39:13-58
+48            android:name="ca.unb.mobiledev.gittogetherui.ui.home.PageActivity"
+48-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:39:13-49
 49            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
 49-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:40:13-63
 50        </activity>
 51        <activity
-51-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
-52            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-52-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:24:13-79
-53            android:exported="false"
-53-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:25:13-37
-54            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-54-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:26:13-72
-55
-56        <meta-data
-56-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
-57            android:name="com.google.android.gms.version"
-57-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
-58            android:value="@integer/google_play_services_version" />
-58-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
+51-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:42:9-45:20
+52            android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
+52-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:43:13-58
+53            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+53-->C:\Users\Samuel Su\AndroidStudioProjects\GitTogetherUI\app\src\main\AndroidManifest.xml:44:13-63
+54        </activity>
+55        <activity
+55-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
+56            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+56-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:24:13-79
+57            android:exported="false"
+57-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:25:13-37
+58            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+58-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\702ac56caee5568c0f4ed5dff4a008ac\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:26:13-72
 59
-60        <provider
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-61            android:name="androidx.startup.InitializationProvider"
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-62            android:authorities="ca.unb.mobiledev.gittogetherui.androidx-startup"
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-63            android:exported="false" >
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-64            <meta-data
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-65                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-66                android:value="androidx.startup" />
-66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-67            <meta-data
-67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-68                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-68-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-69                android:value="androidx.startup" />
-69-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-70        </provider>
-71    </application>
-72
-73</manifest>
+60        <meta-data
+60-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
+61            android:name="com.google.android.gms.version"
+61-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
+62            android:value="@integer/google_play_services_version" />
+62-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\d389e6fb5f2871638327bb3a5efa4b7c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
+63
+64        <provider
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+65            android:name="androidx.startup.InitializationProvider"
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+66            android:authorities="ca.unb.mobiledev.gittogetherui.androidx-startup"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+67            android:exported="false" >
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+68            <meta-data
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+69                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+70                android:value="androidx.startup" />
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Samuel Su\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Samuel Su\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+74        </provider>
+75    </application>
+76
+77</manifest>

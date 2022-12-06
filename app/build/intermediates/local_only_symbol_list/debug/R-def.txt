@@ -22,6 +22,7 @@ id buttonBar
 id buttonCreateProjects
 id buttonProfile
 id button_manage_home
+id cancelProfileChanges
 id cancel_project_button
 id card_description
 id card_tags
@@ -32,6 +33,7 @@ id create_back_button
 id create_project_button
 id desc_field
 id descriptionScroll
+id emailField
 id filterProjectsCancel
 id filterProjectsFilter
 id filterProjectsHeader
@@ -50,6 +52,12 @@ id login
 id manage_back_button
 id member_list
 id password
+id profileBackButton
+id profileBio
+id profileLocation
+id profileName
+id profileSave
+id profileTextView
 id project_list
 id project_name
 id project_name_row
@@ -66,6 +74,7 @@ layout activity_home
 layout activity_login
 layout activity_manage
 layout activity_page
+layout activity_profile
 layout addprojectfragment
 layout filterprojectsfragment
 layout item

@@ -38,6 +38,7 @@ class PageActivity : AppCompatActivity(){
 
         val descText: TextView = TextView(this)
         descText.text = selectedProject.description
+        descText.textSize = 20f
         description.addView(descText)
 
         codeLink.text = selectedProject.link
