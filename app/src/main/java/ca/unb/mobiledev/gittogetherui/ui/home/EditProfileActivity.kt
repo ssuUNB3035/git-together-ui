@@ -141,8 +141,7 @@ class EditProfileActivity : Activity() {
         private var httpCompleted: Boolean = false
         private const val TAG = "UpdateUser"
         private const val REQUEST_URL =
-            //"http://conan.cloud/api/user/"
-            "http://192.168.2.79/api/user/update"
+            "http://conan.cloud/api/user/"
 
     }
 
