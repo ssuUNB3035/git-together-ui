@@ -6,122 +6,131 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml
+8-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
-9-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml
+9-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:7:22-76
 14
 15    <application
-15-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:9:5-42:19
+15-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:9:5-47:19
 16        android:name="ca.unb.mobiledev.gittogetherui.model.DataHolder"
-16-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:10:9-71
+16-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:10:9-71
 17        android:allowBackup="true"
-17-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:11:9-35
+17-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.8.0] C:\Users\blued\.gradle\caches\transforms-3\fa579a56dc4a7f6c1402557455e44eec\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.8.0] C:\Users\conan\.gradle\caches\transforms-3\fa579a56dc4a7f6c1402557455e44eec\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 19        android:dataExtractionRules="@xml/data_extraction_rules"
-19-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:12:9-65
+19-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:12:9-65
 20        android:debuggable="true"
 21        android:extractNativeLibs="false"
 22        android:fullBackupContent="@xml/backup_rules"
-22-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:13:9-54
+22-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:13:9-54
 23        android:icon="@mipmap/ic_launcher"
-23-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:14:9-43
+23-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:14:9-43
 24        android:label="@string/app_name"
-24-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:15:9-41
+24-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:15:9-41
 25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:16:9-54
+25-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:16:9-54
 26        android:supportsRtl="true"
-26-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:17:9-35
+26-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:17:9-35
 27        android:testOnly="true"
-28        android:theme="@style/Theme.GitTogetherUI" >
-28-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:18:9-51
-29        <activity
-29-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:20:9-29:20
-30            android:name="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity"
-30-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:21:13-49
-31            android:exported="true"
-31-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:22:13-36
-32            android:label="@string/app_name" >
-32-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:23:13-45
-33            <intent-filter>
-33-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:24:13-28:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:25:17-69
-34-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:25:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:27:17-77
-36-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:27:27-74
-37            </intent-filter>
-38        </activity>
-39        <activity
-39-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:30:9-33:20
-40            android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
-40-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:31:13-51
-41            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
-41-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:32:13-63
-42        </activity>
-43        <activity
-43-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:34:9-37:20
-44            android:name="ca.unb.mobiledev.gittogetherui.ui.home.PageActivity"
-44-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:35:13-49
-45            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
-45-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:36:13-63
-46        </activity>
-47        <activity
-47-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:38:9-41:20
-48            android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
-48-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:39:13-58
-49            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
-49-->C:\Users\blued\AndroidStudioProjects\git-together-ui\app\src\main\AndroidManifest.xml:40:13-63
-50        </activity>
-51        <activity
-51-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\1ad884b73a230010d498fefd6b6897f3\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
-52            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-52-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\1ad884b73a230010d498fefd6b6897f3\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:24:13-79
-53            android:exported="false"
-53-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\1ad884b73a230010d498fefd6b6897f3\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:25:13-37
-54            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-54-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\1ad884b73a230010d498fefd6b6897f3\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:26:13-72
-55
-56        <meta-data
-56-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\a8117aa9902d86c0594fa3b990a57e9c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
-57            android:name="com.google.android.gms.version"
-57-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\a8117aa9902d86c0594fa3b990a57e9c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
-58            android:value="@integer/google_play_services_version" />
-58-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\blued\.gradle\caches\transforms-3\a8117aa9902d86c0594fa3b990a57e9c\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
-59
-60        <provider
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-61            android:name="androidx.startup.InitializationProvider"
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-62            android:authorities="ca.unb.mobiledev.gittogetherui.androidx-startup"
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-63            android:exported="false" >
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-64            <meta-data
-64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-65                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-66                android:value="androidx.startup" />
-66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\blued\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
-67            <meta-data
-67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\blued\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-68                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-68-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\blued\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-69                android:value="androidx.startup" />
-69-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\blued\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-70        </provider>
-71    </application>
-72
-73</manifest>
+28        android:theme="@style/Theme.GitTogetherUI"
+28-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:18:9-51
+29        android:usesCleartextTraffic="true" >
+29-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:19:9-44
+30        <activity
+30-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:21:9-30:20
+31            android:name="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity"
+31-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:22:13-49
+32            android:exported="true"
+32-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:23:13-36
+33            android:label="@string/app_name" >
+33-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:24:13-45
+34            <intent-filter>
+34-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:25:13-29:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:26:17-69
+35-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:26:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:28:17-77
+37-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:28:27-74
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:31:9-34:20
+41            android:name="ca.unb.mobiledev.gittogetherui.ui.home.EditProfileActivity"
+41-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:32:13-56
+42            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.EditProfileActivity" >
+42-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:33:13-70
+43        </activity>
+44        <activity
+44-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:35:9-38:20
+45            android:name="ca.unb.mobiledev.gittogetherui.ui.home.ManageActivity"
+45-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:36:13-51
+46            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+46-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:37:13-63
+47        </activity>
+48        <activity
+48-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:39:9-42:20
+49            android:name="ca.unb.mobiledev.gittogetherui.ui.home.PageActivity"
+49-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:40:13-49
+50            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+50-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:41:13-63
+51        </activity>
+52        <activity
+52-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:43:9-46:20
+53            android:name="ca.unb.mobiledev.gittogetherui.ui.home.CreateProjectActivity"
+53-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:44:13-58
+54            android:parentActivityName="ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity" >
+54-->C:\Users\conan\School\android\git-together-ui\app\src\main\AndroidManifest.xml:45:13-63
+55        </activity>
+56        <activity
+56-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\eee33101978d6d1944f6b33644da4e11\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
+57            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+57-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\eee33101978d6d1944f6b33644da4e11\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:24:13-79
+58            android:exported="false"
+58-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\eee33101978d6d1944f6b33644da4e11\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:25:13-37
+59            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+59-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\eee33101978d6d1944f6b33644da4e11\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:26:13-72
+60
+61        <meta-data
+61-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\2878462e5b21485a8cb10fd642a4fe61\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
+62            android:name="com.google.android.gms.version"
+62-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\2878462e5b21485a8cb10fd642a4fe61\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
+63            android:value="@integer/google_play_services_version" />
+63-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\conan\.gradle\caches\transforms-3\2878462e5b21485a8cb10fd642a4fe61\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+67            android:authorities="ca.unb.mobiledev.gittogetherui.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\conan\.gradle\caches\transforms-3\e37c84044ef4fc9cc41aed85566c9d6f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\conan\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\conan\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\conan\.gradle\caches\transforms-3\6d3bf62e374a5252ed8b3b3764221668\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+75        </provider>
+76    </application>
+77
+78</manifest>

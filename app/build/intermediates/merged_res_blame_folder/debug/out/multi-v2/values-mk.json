@@ -4,7 +4,24 @@
             "outputFile": "ca.unb.mobiledev.gittogetherui.app-mergeDebugResources-35:/values-mk/values-mk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\ec9386206fb32c4b0f133b4db45ef14f\\transformed\\material-1.6.1\\res\\values-mk\\values-mk.xml",
+                    "source": "C:\\Users\\conan\\.gradle\\caches\\transforms-3\\2878462e5b21485a8cb10fd642a4fe61\\transformed\\jetified-play-services-basement-15.0.1\\res\\values-mk\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "195",
+                        "endOffsets": "442"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4557",
+                        "endColumns": "195",
+                        "endOffsets": "4748"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\conan\\.gradle\\caches\\transforms-3\\ec9386206fb32c4b0f133b4db45ef14f\\transformed\\material-1.6.1\\res\\values-mk\\values-mk.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\fa579a56dc4a7f6c1402557455e44eec\\transformed\\core-1.8.0\\res\\values-mk\\values-mk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "106",
-                        "startColumns": "4",
-                        "startOffsets": "10196",
-                        "endColumns": "100",
-                        "endOffsets": "10292"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\86f96b00c7cb73def924c58d74ff7ebd\\transformed\\appcompat-1.5.1\\res\\values-mk\\values-mk.xml",
+                    "source": "C:\\Users\\conan\\.gradle\\caches\\transforms-3\\86f96b00c7cb73def924c58d74ff7ebd\\transformed\\appcompat-1.5.1\\res\\values-mk\\values-mk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +57,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\1ad884b73a230010d498fefd6b6897f3\\transformed\\jetified-play-services-base-15.0.1\\res\\values-mk\\values.xml",
+                    "source": "C:\\Users\\conan\\.gradle\\caches\\transforms-3\\fa579a56dc4a7f6c1402557455e44eec\\transformed\\core-1.8.0\\res\\values-mk\\values-mk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "106",
+                        "startColumns": "4",
+                        "startOffsets": "10196",
+                        "endColumns": "100",
+                        "endOffsets": "10292"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\conan\\.gradle\\caches\\transforms-3\\eee33101978d6d1944f6b33644da4e11\\transformed\\jetified-play-services-base-15.0.1\\res\\values-mk\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -71,23 +88,6 @@
                         "startOffsets": "3380,3489,3682,3817,3929,4133,4268,4418,4753,4969,5078,5275,5410,5622,5811,5910,6004",
                         "endColumns": "108,192,134,111,203,134,149,138,215,108,196,134,211,188,98,93,107",
                         "endOffsets": "3484,3677,3812,3924,4128,4263,4413,4552,4964,5073,5270,5405,5617,5806,5905,5999,6107"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\blued\\.gradle\\caches\\transforms-3\\a8117aa9902d86c0594fa3b990a57e9c\\transformed\\jetified-play-services-basement-15.0.1\\res\\values-mk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "195",
-                        "endOffsets": "442"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "4557",
-                        "endColumns": "195",
-                        "endOffsets": "4748"
                     }
                 }
             ]

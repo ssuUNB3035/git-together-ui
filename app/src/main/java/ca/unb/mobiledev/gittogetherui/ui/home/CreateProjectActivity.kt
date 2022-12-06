@@ -9,6 +9,7 @@ import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.core.app.ActivityCompat
@@ -19,11 +20,18 @@ import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.textfield.TextInputEditText
+import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.selects.select
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import java.io.DataOutputStream
+import java.io.IOException
+import java.io.OutputStreamWriter
+import java.net.HttpURLConnection
+import java.net.MalformedURLException
+import java.net.URL
 import java.util.*
 
 
@@ -68,9 +76,6 @@ class CreateProjectActivity : Activity() {
         locationEntry = findViewById(R.id.location_field)
         tagDropdown = findViewById(R.id.tag_dropdown)
         tagLayout = findViewById(R.id.tag_layout)
-
-
-        locationEntry.hint = "city, province/state, country"
 
         getCurrentLocation()
 
@@ -129,11 +134,55 @@ class CreateProjectActivity : Activity() {
             newProject.location = locationEntry.text.toString()
             newProject.tags = selectedTags.toString()
             newProject.link = "https://github.com/ssuUNB3035/git-together-ui/tree/samtest"
-            newProject.id = UUID.randomUUID()
             data.addSelectedProject(newProject)
 
-            // Send project to database, could pass this through a jsonutils call
+            postCall(newProject)
             finish()
+        }
+    }
+
+    private fun postCall(project: Project) {
+        GlobalScope.launch(Dispatchers.IO) {
+            val url = URL(REQUEST_URL)
+            val myURLConnection = url.openConnection() as HttpURLConnection
+            try {
+
+                myURLConnection.requestMethod = "POST"
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Content-Type", "application/json")
+                myURLConnection.setRequestProperty("Accept", "application/json")
+                myURLConnection.doInput = true
+                myURLConnection.doOutput = false
+
+                val jsonObject = JSONObject()
+                jsonObject.put("name", project.name)
+                jsonObject.put("description", project.description)
+                jsonObject.put("location", project.location)
+                jsonObject.put("tags", project.tags)
+                jsonObject.put("link", project.link)
+
+                val outputStreamWriter = OutputStreamWriter(myURLConnection.outputStream)
+                outputStreamWriter.write(jsonObject.toString())
+                outputStreamWriter.flush()
+
+//                val jsonObject: String = Gson().toJson(project, Project::class.java)
+//                DataOutputStream(myURLConnection.outputStream).use { it.writeBytes(jsonObject) }
+
+                val responseCode = myURLConnection.responseCode
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    if (!data.getProjectList().contains(project)) {
+                        data.addSelectedProject(project)
+                    }
+                }
+            } catch (exception: MalformedURLException) {
+                Log.e("Create Error", "MalformedURLException")
+            } catch (exception: IOException) {
+                Log.e("Create Error", "IOException")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                myURLConnection?.disconnect()
+            }
         }
     }
 
@@ -158,8 +207,8 @@ class CreateProjectActivity : Activity() {
         }
         fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
             if (location == null)
-                    Toast.makeText(context, "Cannot get location.", Toast.LENGTH_SHORT).show()
-                else {
+                Toast.makeText(context, "Cannot get location.", Toast.LENGTH_SHORT).show()
+            else {
                     GlobalScope.launch(Dispatchers.IO) {
                         val lat = location.latitude
                         val lon = location.longitude
@@ -195,5 +244,11 @@ class CreateProjectActivity : Activity() {
                 return
             }
         }
+    }
+
+    companion object {
+        private const val TAG = "CreateProject"
+        internal const val REQUEST_URL =
+            "http://conan.cloud/api/projects"
     }
 }

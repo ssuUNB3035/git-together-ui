@@ -19,7 +19,6 @@ import java.net.URL
 class JsonUtils(context: Context) {
     // Getter method for geoDataArray
     private lateinit var projectList: ArrayList<Project>
-    private lateinit var prevString: String
     lateinit var data: DataHolder
 
         private fun processJSON(context: Context) {
@@ -43,10 +42,6 @@ class JsonUtils(context: Context) {
         }
     }
 
-    fun getProjectList(): ArrayList<Project> {
-        return projectList
-    }
-
     private fun loadJSONFromURL() {
         GlobalScope.launch(Dispatchers.IO) {
             val url = URL(REQUEST_URL)
@@ -54,7 +49,7 @@ class JsonUtils(context: Context) {
             try {
 
                 myURLConnection.requestMethod = "GET"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|aOvSGKamniIrHsnGvEDEVCxpiLi9Yvmasw5Ead3B")
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true
                 myURLConnection.doOutput = false
@@ -66,7 +61,7 @@ class JsonUtils(context: Context) {
                     var tempList: ArrayList<Project> = ArrayList()
                     try {
                         val gson = GsonBuilder().create()
-                        tempList = gson.fromJson(loadJSONFromFile(), object :
+                        tempList = gson.fromJson(returntest, object :
                             TypeToken<ArrayList<Project>>(){}.type)
                     } catch (e: Exception) {
                         e.printStackTrace()
@@ -76,6 +71,7 @@ class JsonUtils(context: Context) {
                             data.addProject(i)
                         }
                     }
+                    data.getActivity().updateArrayAdapter()
 
                 }
             } catch (exception: MalformedURLException) {
@@ -94,7 +90,7 @@ class JsonUtils(context: Context) {
     private fun loadJSONFromFile(): String? {
         val jsonString: String
         try {
-            jsonString = """[{"name":"New Project #1","description":"A new project!","tags":"c# c++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8"},{"name":"New Project #2","description":"A second new project!","tags":"java c++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c"},{"name":"New Project #3","description":"A third new project!","tags":"kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7"}]"""
+            jsonString = """[{"name":"New Project #1","description":"1 Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeext","tags":"C# C++","id":"35dcfd0a-9da6-4d92-80b9-14296d6914b8", "link":"https://developer.android.com/kotlin"},{"name":"New Project #2","description":"2 Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeext","tags":"Java C++","id":"e1bbc215-6ac0-48bf-a701-2dfc3dbb788c","link":"https://developer.android.com/kotlin"},{"name":"New Project #3","description":"3 Teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeext","tags":"Kotlin","id":"6b0b4a70-2073-4cf0-a485-77678d5086c7","link":"https://developer.android.com/kotlin"}]"""
 
         } catch (ioException: IOException) {
             ioException.printStackTrace()
@@ -127,7 +123,7 @@ class JsonUtils(context: Context) {
     companion object {
         private const val TAG = "JsonUtils"
         private const val REQUEST_URL =
-            "https://gentle-ravine-38100.herokuapp.com/api/projects"
+            "http://192.168.2.79/api/projects"
         private const val JSON_KEY_TITLE = "title"
         private const val JSON_KEY_COORDINATES = "coordinates"
     }
