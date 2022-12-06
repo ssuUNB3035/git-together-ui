@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/project_name_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project #1"
+        android:textSize="80px"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"/>
+    <Button
+        android:id="@+id/remove_project_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove"
+        android:textSize="50px"
+        android:layout_gravity="right"/>
+
+</LinearLayout>

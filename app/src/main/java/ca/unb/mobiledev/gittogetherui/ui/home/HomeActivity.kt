@@ -1,73 +1,113 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 
-import android.app.Activity
-import android.widget.ArrayAdapter
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import ca.unb.mobiledev.gittogetherui.R
+import ca.unb.mobiledev.gittogetherui.model.DataHolder
+import ca.unb.mobiledev.gittogetherui.model.Project
+import ca.unb.mobiledev.gittogetherui.model.User
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import com.lorentzos.flingswipe.SwipeFlingAdapterView.onFlingListener
-import android.widget.Toast
-import java.util.ArrayList
+import java.util.*
+import kotlin.collections.ArrayList
 
-class HomeActivity : Activity() {
-    private var al: ArrayList<String>? = null
-    private var arrayAdapter: ArrayAdapter<String>? = null
+/*
+    Homepage of the Application
+    Users may access the 'Edit Profile' page, 'Manage Profile' page, and 'Create Project' page here
+ */
+class HomeActivity : AppCompatActivity() {
+    private var al: ArrayList<Project>? = null
+    private var arrayAdapter: CardAdapter? = null
+    lateinit var data: DataHolder
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        data = applicationContext as DataHolder
+        data.setActivity(this)
+
+        // Dummy User data
+        var newUser: User = User()
+        newUser.id = UUID.fromString("b0ff4b6a-74ef-11ed-a1eb-0242ac120002")
+        newUser.bearer = "2|QD9J3Mwi1olxtrJsHj9OueTf5ky0Ii9EEosliTaU"
+        newUser.name = "Samuel Su"
+        newUser.bio = "Hello!"
+        newUser.email = "ssu@unb.ca"
+        newUser.location = "Fredericton, New Brunswick, Canada"
+        data.user = newUser
+
+        //Setting the button events
+        var profileButton = findViewById<Button>(R.id.buttonProfile)
+        profileButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        var manageButton = findViewById<Button>(R.id.button_manage_home)
+        manageButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, ManageActivity::class.java)
+            startActivity(intent)
+        }
+
+        var createButton = findViewById<Button>(R.id.buttonCreateProjects)
+        createButton.setOnClickListener {
+            val intent = Intent(this@HomeActivity, CreateProjectActivity::class.java)
+            startActivity(intent)
+        }
 
         // Adding the projects to the swipe cards
         al = ArrayList()
-        al!!.add("Project #1")
-        al!!.add("Project #2")
-        al!!.add("Project #3")
-        al!!.add("Project #4")
-        al!!.add("Project #5")
-        al!!.add("Project #6")
-        al!!.add("Project #7")
-        al!!.add("Project #8")
+        val jsonUtils = JsonUtils(this)
+        jsonUtils.processJSON()
 
-        arrayAdapter = ArrayAdapter(this, R.layout.item, R.id.helloText, al!!)
+        arrayAdapter = CardAdapter(this, data.getProjectList()!!)
 
         val flingContainer = findViewById<View>(R.id.frame) as SwipeFlingAdapterView
         flingContainer.adapter = arrayAdapter
 
         flingContainer.setFlingListener(object : onFlingListener {
             override fun removeFirstObjectInAdapter() {
-                // this is the simplest way to delete an object from the Adapter (/AdapterView)
-                Log.d("LIST", "removed object!")
-                al!!.removeAt(0)
-                arrayAdapter!!.notifyDataSetChanged()
+                // Nothing
             }
 
             override fun onLeftCardExit(dataObject: Any) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
-                Toast.makeText(this@HomeActivity, "Left!", Toast.LENGTH_SHORT).show()
+                arrayAdapter!!.remove(dataObject as Project)
             }
 
             override fun onRightCardExit(dataObject: Any) {
-                Toast.makeText(this@HomeActivity, "Right!", Toast.LENGTH_SHORT).show()
+                if (data.getProjectList().contains(dataObject as Project)
+                    && !data.selectedProjectList.contains(dataObject as Project)) {
+                    data.addSelectedProject(dataObject as Project)
+                }
+                arrayAdapter!!.remove(dataObject as Project)
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
-                // Ask for more data here
-                al!!.add("XML $i")
-                arrayAdapter!!.notifyDataSetChanged()
-                Log.d("LIST", "notified")
-                i++
+                if (itemsInAdapter < 2) {
+                    var tempArray: ArrayList<Project> = ArrayList()
+                    for (p: Project in data.unFilteredProjects) {
+                        if (!data.selectedProjectList.contains(p)) {
+                            tempArray.add(p)
+                        }
+                    }
+                    data.projectList.addAll(tempArray)
+                    arrayAdapter!!.notifyDataSetChanged()
+                    Log.d("LIST", "notified")
+                    i++
+                }
             }
 
             override fun onScroll(scrollProgressPercent: Float) {}
         })
 
-
-        // Optionally add an OnItemClickListener
         flingContainer.setOnItemClickListener { itemPosition, dataObject ->
             Toast.makeText(
                 this@HomeActivity,
@@ -75,5 +115,25 @@ class HomeActivity : Activity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+
+        var filterButton = findViewById<Button>(R.id.filterProjectsHome)
+        filterButton.setOnClickListener {
+            var dialog = FilterProjectsFragment()
+
+            dialog.show(supportFragmentManager, "filterProjectsFragment")
+        }
+    }
+
+    fun inviteMember(name: String, hashString: String, email: String) {
+        val emailAddress = arrayOf(email)
+        val emailSubject = "Invitation to "
+        val emailText = "You've been invited to:"
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, emailAddress)
+            putExtra(Intent.EXTRA_SUBJECT, emailSubject)
+            putExtra(Intent.EXTRA_TEXT, emailText)
+        }
+        startActivity(intent)
     }
 }
