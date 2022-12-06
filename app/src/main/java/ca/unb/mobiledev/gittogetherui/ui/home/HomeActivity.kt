@@ -37,11 +37,12 @@ class HomeActivity : AppCompatActivity() {
         // Dummy User data
         var newUser: User = User()
         newUser.id = UUID.fromString("b0ff4b6a-74ef-11ed-a1eb-0242ac120002")
-        newUser.bearer = "1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb"
+        newUser.bearer = "2|QD9J3Mwi1olxtrJsHj9OueTf5ky0Ii9EEosliTaU"
         newUser.name = "Samuel Su"
         newUser.bio = "Hello!"
         newUser.email = "ssu@unb.ca"
         newUser.location = "Fredericton, New Brunswick, Canada"
+        data.user = newUser
 
         //Setting the button events
         var profileButton = findViewById<Button>(R.id.buttonProfile)
