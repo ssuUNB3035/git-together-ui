@@ -12,4 +12,5 @@ data class User(var name: String? = null,
                 var bio: String? = null,
                 var location: String? = null,
                 var email: String? = null,
+                var bearer: String? = null,
                 var id: UUID? = null,) : Serializable

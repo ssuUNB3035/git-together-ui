@@ -1,28 +1,26 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 import android.content.Context
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.*
-import java.lang.Thread.sleep
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
+
 
 class JsonUtils(context: Context) {
     // Getter method for geoDataArray
     private lateinit var projectList: ArrayList<Project>
     lateinit var data: DataHolder
 
-        private fun processJSON(context: Context) {
-            data = context.applicationContext as DataHolder
+        fun processJSON() {
         // Initialize the data array
         projectList = ArrayList()
 
@@ -63,6 +61,7 @@ class JsonUtils(context: Context) {
                         val gson = GsonBuilder().create()
                         tempList = gson.fromJson(returntest, object :
                             TypeToken<ArrayList<Project>>(){}.type)
+
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
@@ -71,8 +70,49 @@ class JsonUtils(context: Context) {
                             data.addProject(i)
                         }
                     }
-                    data.getActivity().updateArrayAdapter()
+                }
+            } catch (exception: MalformedURLException) {
+                Log.e(TAG, "MalformedURLException")
+            } catch (exception: IOException) {
+                Log.e(TAG, "IOException")
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                myURLConnection?.disconnect()
+            }
+        }
+    }
 
+    fun findJSONviaHash(hashString: String) {
+        GlobalScope.launch(Dispatchers.IO) {
+            val url = URL("http://conan.cloud/api/projects/search/$hashString")
+            val myURLConnection = url.openConnection() as HttpURLConnection
+            try {
+
+                myURLConnection.requestMethod = "GET"
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Accept", "application/json")
+                myURLConnection.doInput = true
+                myURLConnection.doOutput = false
+
+                val responseCode = myURLConnection.responseCode
+                if (responseCode == HttpURLConnection.HTTP_OK) {
+                    val streamIn = BufferedInputStream(myURLConnection.inputStream)
+                    val returntest = convertStreamToString(streamIn)
+                    var tempList: ArrayList<Project> = ArrayList()
+                    try {
+                        val gson = GsonBuilder().create()
+                        tempList = gson.fromJson(returntest, object :
+                            TypeToken<ArrayList<Project>>(){}.type)
+
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                    for (i in tempList) {
+                        if (!data.getSelectedProjects().contains(i)) {
+                            data.addSelectedProject(i)
+                        }
+                    }
                 }
             } catch (exception: MalformedURLException) {
                 Log.e(TAG, "MalformedURLException")
@@ -117,7 +157,7 @@ class JsonUtils(context: Context) {
 
     // Initializer to read our data source (JSON file) into an array of course objects
     init {
-        processJSON(context)
+        data = context.applicationContext as DataHolder
     }
 
     companion object {

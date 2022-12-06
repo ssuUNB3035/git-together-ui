@@ -40,7 +40,6 @@ class FilterProjectsFragment: DialogFragment() {
         var filterButton = rootView.findViewById<Button>(R.id.filterProjectsFilter)
         filterButton.setOnClickListener {
             data.filterProjects(selectedTags)
-            data.getActivity().updateArrayAdapter()
             Toast.makeText(context, "Filtered Projects", Toast.LENGTH_SHORT).show()
 
             dismiss()

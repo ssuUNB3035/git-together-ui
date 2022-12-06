@@ -2640,6 +2640,7 @@ id addProjectsAdd
 id addProjectsCancel
 id addProjectsHeader
 id addProjectsInput
+id addProjectsInputLayout
 id adjust_height
 id adjust_width
 id alertTitle

@@ -35,6 +35,7 @@ class HomeActivity : AppCompatActivity() {
         // Dummy User data
         var newUser: User = User()
         newUser.id = UUID.fromString("b0ff4b6a-74ef-11ed-a1eb-0242ac120002")
+        newUser.bearer = "1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb"
         newUser.name = "Samuel Su"
         newUser.bio = "Hello!"
         newUser.email = "ssu@unb.ca"
@@ -62,6 +63,7 @@ class HomeActivity : AppCompatActivity() {
         // Adding the projects to the swipe cards
         al = ArrayList()
         val jsonUtils = JsonUtils(this)
+        jsonUtils.processJSON()
 
         arrayAdapter = CardAdapter(this, data.getProjectList()!!)
 
@@ -75,7 +77,6 @@ class HomeActivity : AppCompatActivity() {
 
             override fun onLeftCardExit(dataObject: Any) {
                 arrayAdapter!!.remove(dataObject as Project)
-                //data.unFilteredProjects.remove(dataObject as Project)
             }
 
             override fun onRightCardExit(dataObject: Any) {
@@ -87,16 +88,18 @@ class HomeActivity : AppCompatActivity() {
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
-                var tempArray: ArrayList<Project> = ArrayList()
-                for (p: Project in data.unFilteredProjects) {
-                    if (!data.selectedProjectList.contains(p)) {
-                        tempArray.add(p)
+                if (itemsInAdapter < 2) {
+                    var tempArray: ArrayList<Project> = ArrayList()
+                    for (p: Project in data.unFilteredProjects) {
+                        if (!data.selectedProjectList.contains(p)) {
+                            tempArray.add(p)
+                        }
                     }
+                    data.projectList.addAll(tempArray)
+                    arrayAdapter!!.notifyDataSetChanged()
+                    Log.d("LIST", "notified")
+                    i++
                 }
-                data.projectList.addAll(tempArray)
-                arrayAdapter!!.notifyDataSetChanged()
-                Log.d("LIST", "notified")
-                i++
             }
 
             override fun onScroll(scrollProgressPercent: Float) {}
@@ -116,9 +119,5 @@ class HomeActivity : AppCompatActivity() {
 
             dialog.show(supportFragmentManager, "filterProjectsFragment")
         }
-    }
-
-    fun updateArrayAdapter() {
-        //arrayAdapter!!.notifyDataSetChanged()
     }
 }

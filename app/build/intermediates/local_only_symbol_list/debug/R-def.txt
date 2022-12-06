@@ -17,6 +17,7 @@ id addProjectsAdd
 id addProjectsCancel
 id addProjectsHeader
 id addProjectsInput
+id addProjectsInputLayout
 id back_button
 id buttonBar
 id buttonCreateProjects

@@ -2639,6 +2639,7 @@ int id addProjectsAdd 0x7f080049
 int id addProjectsCancel 0x7f08004a
 int id addProjectsHeader 0x7f08004b
 int id addProjectsInput 0x7f08004c
+int id addProjectsInputLayout 0x7f080228
 int id adjust_height 0x7f08004d
 int id adjust_width 0x7f08004e
 int id alertTitle 0x7f08004f

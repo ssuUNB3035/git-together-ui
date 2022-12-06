@@ -132,7 +132,7 @@ class CreateProjectActivity : Activity() {
             newProject.name = titleEntry.text.toString()
             newProject.description = descEntry.text.toString()
             newProject.location = locationEntry.text.toString()
-            newProject.tags = selectedTags.toString()
+            newProject.tags = selectedTags.toString() // plz fix
             newProject.link = "https://github.com/ssuUNB3035/git-together-ui/tree/samtest"
             data.addSelectedProject(newProject)
 
