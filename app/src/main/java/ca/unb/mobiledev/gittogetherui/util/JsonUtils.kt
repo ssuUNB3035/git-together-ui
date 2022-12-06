@@ -49,7 +49,7 @@ class JsonUtils(context: Context) {
             try {
 
                 myURLConnection.requestMethod = "GET"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|aOvSGKamniIrHsnGvEDEVCxpiLi9Yvmasw5Ead3B")
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true
                 myURLConnection.doOutput = false
@@ -123,7 +123,7 @@ class JsonUtils(context: Context) {
     companion object {
         private const val TAG = "JsonUtils"
         private const val REQUEST_URL =
-            "https://gentle-ravine-38100.herokuapp.com/api/projects"
+            "http://conan.cloud/api/projects"
         private const val JSON_KEY_TITLE = "title"
         private const val JSON_KEY_COORDINATES = "coordinates"
     }

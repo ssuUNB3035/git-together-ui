@@ -25,8 +25,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import java.io.DataOutputStream
 import java.io.IOException
+import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
@@ -132,7 +134,6 @@ class CreateProjectActivity : Activity() {
             newProject.location = locationEntry.text.toString()
             newProject.tags = selectedTags.toString()
             newProject.link = "https://github.com/ssuUNB3035/git-together-ui/tree/samtest"
-            newProject.id = UUID.randomUUID()
             data.addSelectedProject(newProject)
 
             postCall(newProject)
@@ -142,18 +143,30 @@ class CreateProjectActivity : Activity() {
 
     private fun postCall(project: Project) {
         GlobalScope.launch(Dispatchers.IO) {
-            val url = URL("https://gentle-ravine-38100.herokuapp.com/api/project")
+            val url = URL(REQUEST_URL)
             val myURLConnection = url.openConnection() as HttpURLConnection
             try {
 
                 myURLConnection.requestMethod = "POST"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|aOvSGKamniIrHsnGvEDEVCxpiLi9Yvmasw5Ead3B")
+                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Content-Type", "application/json")
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true
                 myURLConnection.doOutput = false
 
-                val jsonObject: String = Gson().toJson(project, Project::class.java)
-                DataOutputStream(myURLConnection.outputStream).use { it.writeBytes(jsonObject) }
+                val jsonObject = JSONObject()
+                jsonObject.put("name", project.name)
+                jsonObject.put("description", project.description)
+                jsonObject.put("location", project.location)
+                jsonObject.put("tags", project.tags)
+                jsonObject.put("link", project.link)
+
+                val outputStreamWriter = OutputStreamWriter(myURLConnection.outputStream)
+                outputStreamWriter.write(jsonObject.toString())
+                outputStreamWriter.flush()
+
+//                val jsonObject: String = Gson().toJson(project, Project::class.java)
+//                DataOutputStream(myURLConnection.outputStream).use { it.writeBytes(jsonObject) }
 
                 val responseCode = myURLConnection.responseCode
                 if (responseCode == HttpURLConnection.HTTP_OK) {
@@ -236,6 +249,6 @@ class CreateProjectActivity : Activity() {
     companion object {
         private const val TAG = "CreateProject"
         private const val REQUEST_URL =
-            "https://gentle-ravine-38100.herokuapp.com/api/project"
+            "http://conan.cloud/api/projects"
     }
 }

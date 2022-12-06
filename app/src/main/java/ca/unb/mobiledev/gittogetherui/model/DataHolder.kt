@@ -4,7 +4,6 @@ import ProjectListAdapter
 import android.app.Application
 import ca.unb.mobiledev.gittogetherui.ui.home.HomeActivity
 
-
 class DataHolder : Application() {
     var unFilteredProjects: ArrayList<Project> = ArrayList()
     var staticProjectsList: ArrayList<Project> = ArrayList()
@@ -44,14 +43,23 @@ class DataHolder : Application() {
     }
 
     fun filterProjects(tags: ArrayList<String>) {
-        for (p: Project in unFilteredProjects) {
-            if (p.tags != null) {
-                var tagsArray: List<String> = p.tags!!.split(" ")
-                for (t: String in tags) {
-                    if (tagsArray.contains(t)) {
-                        break
+        if (tags.size > 0) {
+            for (p: Project in unFilteredProjects) {
+                if (p.tags != null) {
+                    var tagsArray: List<String> = p.tags!!.split(" ")
+                    for (t: String in tags) {
+                        if (tagsArray.contains(t)) {
+                            break
+                        }
+                        projectList.remove(p)
                     }
-                    projectList.remove(p)
+                }
+            }
+        }
+        else {
+            for (p: Project in unFilteredProjects) {
+                if (!selectedProjectList.contains(p)) {
+                    projectList.add(p)
                 }
             }
         }

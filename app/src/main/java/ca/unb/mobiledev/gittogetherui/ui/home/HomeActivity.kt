@@ -75,17 +75,25 @@ class HomeActivity : AppCompatActivity() {
 
             override fun onLeftCardExit(dataObject: Any) {
                 arrayAdapter!!.remove(dataObject as Project)
-                data.unFilteredProjects.remove(dataObject as Project)
+                //data.unFilteredProjects.remove(dataObject as Project)
             }
 
             override fun onRightCardExit(dataObject: Any) {
-                if (data.getProjectList().contains(dataObject as Project)) {
+                if (data.getProjectList().contains(dataObject as Project)
+                    && !data.selectedProjectList.contains(dataObject as Project)) {
                     data.addSelectedProject(dataObject as Project)
                 }
                 arrayAdapter!!.remove(dataObject as Project)
             }
 
             override fun onAdapterAboutToEmpty(itemsInAdapter: Int) {
+                var tempArray: ArrayList<Project> = ArrayList()
+                for (p: Project in data.unFilteredProjects) {
+                    if (!data.selectedProjectList.contains(p)) {
+                        tempArray.add(p)
+                    }
+                }
+                data.projectList.addAll(tempArray)
                 arrayAdapter!!.notifyDataSetChanged()
                 Log.d("LIST", "notified")
                 i++
@@ -111,6 +119,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun updateArrayAdapter() {
-        arrayAdapter!!.notifyDataSetChanged()
+        //arrayAdapter!!.notifyDataSetChanged()
     }
 }
