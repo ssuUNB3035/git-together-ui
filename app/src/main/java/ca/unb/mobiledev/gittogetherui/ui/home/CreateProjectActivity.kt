@@ -20,13 +20,11 @@ import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.textfield.TextInputEditText
-import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
-import java.io.DataOutputStream
 import java.io.IOException
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
@@ -34,7 +32,10 @@ import java.net.MalformedURLException
 import java.net.URL
 import java.util.*
 
-
+/*
+    Create Project Page
+    Users can create a project here
+ */
 class CreateProjectActivity : Activity() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 

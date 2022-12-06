@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 
+/*
+    Project Page
+    Users access the repository link, description, and list of current members of projects here
+ */
 class PageActivity : AppCompatActivity(){
     lateinit var data: DataHolder
     lateinit var projectName: TextView
