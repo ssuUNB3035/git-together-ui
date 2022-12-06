@@ -48,6 +48,13 @@ class PageActivity : AppCompatActivity(){
         back.setOnClickListener {
             finish()
         }
+
+        var inviteMember = findViewById<Button>(R.id.inviteMemberButton)
+        inviteMember.setOnClickListener {
+            var dialog = InviteMemberFragment()
+
+            dialog.show(supportFragmentManager, "inviteMemberFragment")
+        }
     }
 
     fun goToRepo(url: String) {

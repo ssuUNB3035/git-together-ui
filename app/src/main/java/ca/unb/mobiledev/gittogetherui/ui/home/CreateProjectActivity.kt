@@ -148,7 +148,7 @@ class CreateProjectActivity : Activity() {
             try {
 
                 myURLConnection.requestMethod = "POST"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Authorization", "Bearer " + data.user.bearer)
                 myURLConnection.setRequestProperty("Content-Type", "application/json")
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true

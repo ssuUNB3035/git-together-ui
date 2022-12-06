@@ -43,6 +43,11 @@ id filterProjectsTagLayout
 id filterprojectstagbox
 id filtertagdropdown
 id frame
+id inviteButton
+id inviteCancel
+id inviteHeader
+id inviteInput
+id inviteMemberButton
 id item_swipe_left_indicator
 id item_swipe_right_indicator
 id layout_view
@@ -78,6 +83,7 @@ layout activity_page
 layout activity_profile
 layout addprojectfragment
 layout filterprojectsfragment
+layout invitefragment
 layout item
 layout recyclerview_row
 layout tag_pill

@@ -2829,6 +2829,11 @@ id immediateStop
 id included
 id info
 id invisible
+id inviteButton
+id inviteCancel
+id inviteHeader
+id inviteInput
+id inviteMemberButton
 id inward
 id italic
 id item_swipe_left_indicator
@@ -3233,6 +3238,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout filterprojectsfragment
+layout invitefragment
 layout item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

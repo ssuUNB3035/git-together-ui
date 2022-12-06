@@ -1,6 +1,9 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
 import com.google.gson.Gson
@@ -47,7 +50,7 @@ class JsonUtils(context: Context) {
             try {
 
                 myURLConnection.requestMethod = "GET"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Authorization", "Bearer " + data.user.bearer)
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true
                 myURLConnection.doOutput = false
@@ -90,7 +93,7 @@ class JsonUtils(context: Context) {
             try {
 
                 myURLConnection.requestMethod = "GET"
-                myURLConnection.setRequestProperty("Authorization", "Bearer 1|Phme82wLS3u8n4zrCVupBwXRWy3BHX09KhSDMeYb")
+                myURLConnection.setRequestProperty("Authorization", "Bearer " + data.user.bearer)
                 myURLConnection.setRequestProperty("Accept", "application/json")
                 myURLConnection.doInput = true
                 myURLConnection.doOutput = false

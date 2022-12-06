@@ -2828,6 +2828,11 @@ int id immediateStop 0x7f080105
 int id included 0x7f080106
 int id info 0x7f080107
 int id invisible 0x7f080108
+int id inviteButton 0x7f080229
+int id inviteCancel 0x7f08022a
+int id inviteHeader 0x7f08022b
+int id inviteInput 0x7f08022c
+int id inviteMemberButton 0x7f08022d
 int id inward 0x7f080109
 int id italic 0x7f08010a
 int id item_swipe_left_indicator 0x7f08010b
@@ -3232,6 +3237,7 @@ int layout design_navigation_menu_item 0x7f0b0030
 int layout design_text_input_end_icon 0x7f0b0031
 int layout design_text_input_start_icon 0x7f0b0032
 int layout filterprojectsfragment 0x7f0b0033
+int layout invitefragment 0x7f0b008a
 int layout item 0x7f0b0034
 int layout m3_alert_dialog 0x7f0b0035
 int layout m3_alert_dialog_actions 0x7f0b0036

@@ -1,12 +1,14 @@
 package ca.unb.mobiledev.gittogetherui.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import ca.unb.mobiledev.gittogetherui.R
 import ca.unb.mobiledev.gittogetherui.model.DataHolder
 import ca.unb.mobiledev.gittogetherui.model.Project
@@ -119,5 +121,18 @@ class HomeActivity : AppCompatActivity() {
 
             dialog.show(supportFragmentManager, "filterProjectsFragment")
         }
+    }
+
+    fun inviteMember(name: String, hashString: String, email: String) {
+        val emailAddress = arrayOf(email)
+        val emailSubject = "Invitation to "
+        val emailText = "You've been invited to:"
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, emailAddress)
+            putExtra(Intent.EXTRA_SUBJECT, emailSubject)
+            putExtra(Intent.EXTRA_TEXT, emailText)
+        }
+        startActivity(intent)
     }
 }
