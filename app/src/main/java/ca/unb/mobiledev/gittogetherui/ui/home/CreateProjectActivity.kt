@@ -42,6 +42,7 @@ class CreateProjectActivity : Activity() {
     private lateinit var titleEntry: TextInputEditText
     private lateinit var descEntry: TextInputEditText
     private lateinit var locationEntry: TextInputEditText
+    private lateinit var linkEntry: TextInputEditText
     private lateinit var tagDropdown: Spinner
     private lateinit var tagLayout: LinearLayout
     private var selectedTags: ArrayList<String> = ArrayList()
@@ -75,8 +76,10 @@ class CreateProjectActivity : Activity() {
         titleEntry = findViewById(R.id.title_field)
         descEntry = findViewById(R.id.desc_field)
         locationEntry = findViewById(R.id.location_field)
+        linkEntry = findViewById(R.id.link_field)
         tagDropdown = findViewById(R.id.tag_dropdown)
         tagLayout = findViewById(R.id.tag_layout)
+
 
         getCurrentLocation()
 
@@ -125,16 +128,22 @@ class CreateProjectActivity : Activity() {
         if (titleEntry.text.toString() == ""
             || descEntry.text.toString() == ""
             || locationEntry.text.toString() == ""
+            || linkEntry.text.toString() == ""
             || selectedTags.size == 0) {
             Toast.makeText(context, "Please fill out all fields", Toast.LENGTH_SHORT)
         }
         else {
+            var tagString: String = ""
+            for (s: String in selectedTags) {
+                tagString += s
+                tagString += " "
+            }
             var newProject = Project()
             newProject.name = titleEntry.text.toString()
             newProject.description = descEntry.text.toString()
             newProject.location = locationEntry.text.toString()
-            newProject.tags = selectedTags.toString() // plz fix
-            newProject.link = "https://github.com/ssuUNB3035/git-together-ui/tree/samtest"
+            newProject.tags = tagString
+            newProject.link = linkEntry.text.toString()
             data.addSelectedProject(newProject)
 
             postCall(newProject)
