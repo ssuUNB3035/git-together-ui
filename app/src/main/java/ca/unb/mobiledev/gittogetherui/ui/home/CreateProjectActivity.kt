@@ -207,8 +207,8 @@ class CreateProjectActivity : Activity() {
         }
         fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
             if (location == null)
-                    Toast.makeText(context, "Cannot get location.", Toast.LENGTH_SHORT).show()
-                else {
+                Toast.makeText(context, "Cannot get location.", Toast.LENGTH_SHORT).show()
+            else {
                     GlobalScope.launch(Dispatchers.IO) {
                         val lat = location.latitude
                         val lon = location.longitude
