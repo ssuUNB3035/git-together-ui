@@ -2,10 +2,21 @@
 ### Team Members: Samuel Su, Conan Simons
 Git-Together is a collaborative platform, aiming to help students and indie developers find team members for their projects. The following information is a breakdown of Git-Together's features and the current list of bugs and to-do(s).
 
+## Completed Features
+
+- Swipe right on projects you're interested in! It will be added to your 'Manage Projects' page
+- Swiping left on projects will remove them from your view.
+- Users have a profile, which can be edited through the 'Edit Profile' page. They can edit their Name, Bio, Location, and Email.
+- The projects that a user is in will be listed under 'Manage Projects'. For now,  as long as you're interested you will get access.
+- Users in projects can invite their friends! There is a invite memebers button under the Projects page. This will send an email to an email of your choosing, with an invitation code.
+- Interested users can also gain access to projects by entering the invite code. On the 'Manage Projects' page, there will be a button on the top right. Once prompted, enter the invite code to be added.
+- Users can create projects. Projects have a Name, Description, Location, Link, along with any tags you would like to add.
+
 ## Known Bugs and Missing Features
 - The login screen is not finalized. Instead, a dummy account is provided once the application is launched.
 - The user list on the project page has not been finalized.
-- The Filter button on the homepage does not work correctly. Filtering with no tags brings back all the unselected project cards, but filtering via tags will not show projects if there aren't any cards showing at the time of filtering.
+- The Filter button on the homepage does not work correctly. Filtering with no tags brings back all the unselected project cards, but filtering via tags will not show projects if there aren't any cards showing at the time of filtering. Does not filter by location.
+- Projects do not have an owner, as a result, no one to accept interested users.
 
 ## Homepage
 The Homepage is the first screen you are brought to when launching the application. Once brought to this page you are provided with three dummy project cards and the projects created in the database.
