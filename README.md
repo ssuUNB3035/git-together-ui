@@ -37,23 +37,23 @@ Users may also enroll themselves into projects by clicking on the "Add Projects"
 Once users enter the "Create Project" page, they are presented with multiple fields required to create a project. Once these fields are filled and the user clicks on the "create" button, the project is sent to the database and automatically added to the "Manage Projects" page.
 
 ## Testing Steps
-1.Test if you can swipe left and right on projects on the Homepage. Projects that
+- Test if you can swipe left and right on projects on the Homepage. Projects that
   are swiped right on should be added to the Manage Projects Page. Projects that
   are swiped left on should be discarded.
-2.From the Manage Projects page, you should be able to click on projects that
+- From the Manage Projects page, you should be able to click on projects that
   you’ve swiped right on, in addition to projects you have created on the Create
   Projects Page.
-3.Go to the Create Project page and create a project with all of the fields filled, if all
+- Go to the Create Project page and create a project with all of the fields filled, if all
   of the fields are not filled then you cannot create the project. Enter any URL for
   the link.
-4.The created project should be on the Manage Projects Page. Go to the Project
+- The created project should be on the Manage Projects Page. Go to the Project
   page for the Project you just created and tap on the repository link, you should be
   redirected to the link in a browser on your device.
-5.You can also add members to Projects you are a part of via the Invite button at the top right of
+- You can also add members to Projects you are a part of via the Invite button at the top right of
   the Project page and enter an email to send an invite hash code. (This has not been successfully
   tested yet)
-6.In the Manage Projects page, remove all of the projects. Then tap on the “Add
+- In the Manage Projects page, remove all of the projects. Then tap on the “Add
   Project” button on the top right, and enter this hash:
   4e48139d95f37e7d97e295b03a5d9cf6
-7.you should see a project added to your Manage Projects page. If not, restart the app and 
+- you should see a project added to your Manage Projects page. If not, restart the app and 
   re-enter the hash.
